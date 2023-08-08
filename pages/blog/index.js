@@ -1,8 +1,10 @@
+import Link from "next/link";
+
 const blog = () => {
     return (
         <div>
             <h1>welcome to Code Aspirant blogs</h1>
-            <a href="./first-post">Fist post</a>
+            <Link href="/blog/first-post">First post</Link>
         </div>
     );
 }
