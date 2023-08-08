@@ -1,7 +1,7 @@
 const Footer = () => {
     return (
         <footer>
-            Copyright 2021 CodeAspirant
+            Copyright 2023 CodeAspirant
         </footer>
     )
 }
