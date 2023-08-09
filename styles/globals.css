@@ -38,3 +38,127 @@ footer {
   color: #777;
   border-top: 1px solid #eaeaea;
 }
+
+
+
+@media (min-width: 769px) {
+  .hidden-md {
+    display: none;
+  }
+  .nav_height {
+    height: auto !important; /* Use !important to override any other height rules */
+  }
+  .nav_hidden {
+    display: none;
+  }
+  .nav_links_block {
+    position: absolute;
+    right: 30px;
+    top: 50px;
+  }
+
+  .nav_links_block ul {
+    list-style: none;
+    display: flex; /* Use Flexbox to make the list items flex items */
+    gap: 15px; /* Add space between links */
+  }
+  
+  .nav_links_block li {
+    margin: 0;
+    margin-right: 10px;
+    background-color: rgba(230, 220, 245, 0.200);
+    backdrop-filter: blur(5px);
+    z-index: 999;
+    padding: 5px 14px 5px 14px;
+    border-radius: 3%;
+    font-size: 20px;
+  }
+
+  .logo {
+    margin-left: 70px;
+    margin-top: 9px;
+    margin-bottom: 5px;
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+  }
+
+  .nav-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  .nav_bar {
+    display: flex;
+    justify-content: space-between;
+    transition: background-color 0.3s ease;
+  }
+  
+}
+
+@media (max-width: 768px){
+  .hamburger_button {
+    position: absolute;
+    position: fixed;
+    right: 50px;
+    top: 55px; 
+    transform: translateY(-30%);
+  }
+  .hamburgerunder768 {
+
+  }
+  .nav_height{
+
+  }
+  .full_height {
+    height: 100vh;
+  }
+  .nav_active {
+    padding: 3rem; /* Equivalent to p-12 in Tailwind (assuming the default 1rem unit) */
+  display: block;
+  }
+  .nav_notactive_less_768 {
+    display: none;
+  }
+  .navlinks_activeless768 {
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #000000;
+    font-size: 20px;
+  }
+  .nav_links_block {
+    margin-top: 100px;
+  }
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .logo{
+    /* padding-left: 30px; */
+    margin-left: 50px;
+    margin-top: 20px;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+  }
+  .nav_bar {
+    backdrop-filter: blur(0);
+    transition: background-color 0.3s ease;
+  }
+  
+}
+
+.nav_bar {
+  width: 100%;
+  backdrop-filter: blur(10px);
+  transition: background-color 0.3s ease;
+  position: fixed;
+  border-bottom: none;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  margin-top: -9px;
+}
