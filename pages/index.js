@@ -3,6 +3,7 @@ import Head from 'next/head'
 // import Footer from "../comps/Footer"
 import styles from '../styles/Home.module.css'
 import Link from "next/link"
+import Subscribe from '../comps/subscribe/Subscribe'
 
 export default function Home() {
   return (
@@ -13,6 +14,9 @@ export default function Home() {
       </Head>
       <div style={{paddingTop:"150px"}}>
         <h1>Welcome to code Aspirant</h1>
+      </div>
+      <div>
+        <Subscribe />
       </div>
     </>
   )

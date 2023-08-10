@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@mailchimp/mailchimp_marketing": "^3.0.80",
     "next": "13.4.6",
     "postcss": "^8.4.27",
     "postcss-preset-env": "^9.1.1",
