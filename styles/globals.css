@@ -96,6 +96,18 @@ footer {
     justify-content: space-between;
     transition: background-color 0.3s ease;
   }
+  .interact_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    background-color: rgb(218, 219, 155);
+  }
+  
+  .left_ad_posts, .right_ad_posts {
+    flex: 1;
+    height: 755px;
+  }
   
 }
 
@@ -103,15 +115,9 @@ footer {
   .hamburger_button {
     position: absolute;
     position: fixed;
-    right: 50px;
-    top: 55px; 
+    right: 55px;
+    top: 53px; 
     transform: translateY(-30%);
-  }
-  .hamburgerunder768 {
-
-  }
-  .nav_height{
-
   }
   .full_height {
     height: 100vh;
@@ -126,11 +132,80 @@ footer {
   .navlinks_activeless768 {
     padding-top: 50px;
     padding-left: 50px;
-    color: #000000;
+    color: #fff;
     font-size: 20px;
+    margin-right: 40px;
   }
   .nav_links_block {
     margin-top: 100px;
+    text-align: center;
+    width:100%;
+  }
+  .nav_links_block ul li {
+    margin-top: 40px;
+    color: magenta;
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .logo{
+    position: fixed;
+    margin-left: 35px;
+    margin-top: 20px;
+    border-radius: 50%;
+    height: 95px;
+    width: 95px;
+  }
+  .nav_bar {
+    padding-bottom: 110px;;
+  }
+  
+}
+
+@media (max-width: 450px){
+  .hamburger_button {
+    position: absolute;
+    position: fixed;
+    right: 50px;
+    top: 53px; 
+    transform: translateY(-30%);
+  }
+  .full_height {
+    height: 100vh;
+  }
+  .nav_active {
+    padding: 3rem; /* Equivalent to p-12 in Tailwind (assuming the default 1rem unit) */
+    display: block;
+  }
+  .nav_notactive_less_768 {
+    display: none;
+  }
+  .navlinks_activeless768 {
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 40px;
+  }
+  .nav_links_block {
+    margin-top: 130px;
+    text-align: center;
+    width:100%;
+  }
+  .nav_links_block ul li {
+    margin-top: 40px;
+    margin-right: 0px;
+    color: rgb(255, 16, 255);
+    /* color: rgba(245, 40, 145, 0.8); */
+    font-weight: bold;
+    font-size: 30px;
   }
   .nav_container {
     display: flex;
@@ -142,15 +217,201 @@ footer {
   }
   .logo{
     /* padding-left: 30px; */
-    margin-left: 50px;
-    margin-top: 20px;
+    margin-left: 30px;
+    margin-top: 15px;
     border-radius: 50%;
-    height: 85px;
-    width: 85px;
+    height: 90px;
+    width: 90px;
+    position: fixed;
   }
   .nav_bar {
     backdrop-filter: blur(0);
     transition: background-color 0.3s ease;
+    padding-bottom: 100px;
+  }
+  
+}
+
+@media (max-width: 425px){
+  .hamburger_button {
+    position: absolute;
+    position: fixed;
+    right: 45px;
+    top: 53px; 
+    transform: translateY(-30%);
+  }
+  .full_height {
+    height: 100vh;
+  }
+  .nav_active {
+    padding: 3rem; /* Equivalent to p-12 in Tailwind (assuming the default 1rem unit) */
+    display: block;
+  }
+  .nav_notactive_less_768 {
+    display: none;
+  }
+  .navlinks_activeless768 {
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 40px;
+  }
+  .nav_links_block {
+    margin-top: 130px;
+    text-align: center;
+    width:100%;
+  }
+  .nav_links_block ul li {
+    margin-top: 40px;
+    margin-right: 0px;
+    color: rgb(255, 16, 255);
+    /* color: rgba(245, 40, 145, 0.8); */
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .logo{
+    /* padding-left: 30px; */
+    margin-left: 30px;
+    margin-top: 18px;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    position: fixed;
+  }
+  .nav_bar {
+    backdrop-filter: blur(0);
+    transition: background-color 0.3s ease;
+    padding-bottom: 100px;
+  }
+  
+}
+
+@media (max-width: 415px){
+  .hamburger_button {
+    position: absolute;
+    position: fixed;
+    right: 45px;
+    top: 55px; 
+    transform: translateY(-30%);
+  }
+  .full_height {
+    height: 100vh;
+  }
+  .nav_active {
+    padding: 3rem; /* Equivalent to p-12 in Tailwind (assuming the default 1rem unit) */
+    display: block;
+  }
+  .nav_notactive_less_768 {
+    display: none;
+  }
+  .navlinks_activeless768 {
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 40px;
+  }
+  .nav_links_block {
+    margin-top: 130px;
+    text-align: center;
+    width:100%;
+  }
+  .nav_links_block ul li {
+    margin-top: 40px;
+    margin-right: 0px;
+    color: rgb(255, 16, 255);
+    /* color: rgba(245, 40, 145, 0.8); */
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .logo{
+    /* padding-left: 30px; */
+    margin-left: 25px;
+    margin-top: 18px;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    position: fixed;
+  }
+  .nav_bar {
+    backdrop-filter: blur(0);
+    transition: background-color 0.3s ease;
+    padding-bottom: 100px;
+  }
+  
+}
+
+/* iphone SE  ---375--- */
+@media (max-width: 380px){ 
+  .hamburger_button {
+    position: absolute;
+    position: fixed;
+    right: 45px;
+    top: 55px; 
+    transform: translateY(-30%);
+  }
+  .full_height {
+    height: 100vh;
+  }
+  .nav_active {
+    padding: 3rem; /* Equivalent to p-12 in Tailwind (assuming the default 1rem unit) */
+    display: block;
+  }
+  .nav_notactive_less_768 {
+    display: none;
+  }
+  .navlinks_activeless768 {
+    padding-top: 50px;
+    padding-left: 50px;
+    color: #fff;
+    font-size: 20px;
+    margin-right: 40px;
+  }
+  .nav_links_block {
+    margin-top: 130px;
+    text-align: center;
+    width:100%;
+  }
+  .nav_links_block ul li {
+    margin-top: 40px;
+    margin-right: 0px;
+    color: rgb(255, 16, 255);
+    /* color: rgba(245, 40, 145, 0.8); */
+    font-weight: bold;
+    font-size: 30px;
+  }
+  .nav_container {
+    display: flex;
+    justify-content: space-between;
+    backdrop-filter: blur(10px);
+    transition: background-color 0.3s ease;
+    width: 100%;
+    padding-bottom: 20px;
+  }
+  .logo{
+    margin-left: 25px;
+    margin-top: 20px;
+    border-radius: 50%;
+    height: 85px;
+    width: 85px;
+    position: fixed;
   }
   
 }
@@ -165,4 +426,75 @@ footer {
   right: 0;
   z-index: 10;
   margin-top: -9px;
+}
+
+.just_type_it {
+  flex: 0 0 35%;
+  height: 755px; /* Set the desired height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  border: 1px solid #ccc; /* Add a border for better visibility */
+  padding: 10px;}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Width and height of the scrollbar track */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 12px;
+}
+
+/* Styling of the scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #FDFF00;
+  border-radius: 6px;
+}
+
+/* Styling of the scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #FDFF00;
+}
+
+/* Width and height of the scrollbar track for Firefox */
+/* Note: Firefox uses a different syntax for scrollbar customization */
+/* You might need to use a -moz prefix for older versions of Firefox */
+/* For newer versions of Firefox, the prefix is not needed */
+/* For the best compatibility, you can include both versions */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #FDFF00 #000000;
+}
+
+/* Styling of the scrollbar thumb for Firefox */
+*::-webkit-scrollbar-thumb {
+  background-color: #000;
+  border-radius: 10px;
+}
+*::-webkit-scrollbar-thumb:active {
+  background-color: #555;
+}
+
+/* Styling of the scrollbar track for Firefox */
+*::-webkit-scrollbar-track {
+  background-color: #FDFF00;
 }

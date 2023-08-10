@@ -16,7 +16,7 @@ function NavBar() {
                   {navbar ? (
                     <Image src="/close.svg" width={40} height={40} alt="logo" />
                   ) : (
-                    <Image src="/hamburger-menu.svg" width={40} height={40} alt="logo"
+                    <Image src="/hamburger-menu.svg" width={45} height={45} alt="logo"
                       className="hamburgerunder768" />
                   )}
                 </button>
