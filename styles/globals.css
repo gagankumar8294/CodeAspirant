@@ -143,6 +143,7 @@ footer {
   }
   .nav_links_block ul li {
     margin-top: 40px;
+    margin-right: 10px;;
     color: magenta;
     font-weight: bold;
     font-size: 30px;
@@ -201,7 +202,7 @@ footer {
   }
   .nav_links_block ul li {
     margin-top: 40px;
-    margin-right: 0px;
+    margin-right: 10px;
     color: rgb(255, 16, 255);
     /* color: rgba(245, 40, 145, 0.8); */
     font-weight: bold;
@@ -264,7 +265,7 @@ footer {
   }
   .nav_links_block ul li {
     margin-top: 40px;
-    margin-right: 0px;
+    margin-right: 10px;
     color: rgb(255, 16, 255);
     /* color: rgba(245, 40, 145, 0.8); */
     font-weight: bold;
@@ -327,7 +328,7 @@ footer {
   }
   .nav_links_block ul li {
     margin-top: 40px;
-    margin-right: 0px;
+    margin-right: 10px;
     color: rgb(255, 16, 255);
     /* color: rgba(245, 40, 145, 0.8); */
     font-weight: bold;
@@ -391,7 +392,7 @@ footer {
   }
   .nav_links_block ul li {
     margin-top: 40px;
-    margin-right: 0px;
+    margin-right: 10px;
     color: rgb(255, 16, 255);
     /* color: rgba(245, 40, 145, 0.8); */
     font-weight: bold;

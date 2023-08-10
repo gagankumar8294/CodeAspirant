@@ -26,23 +26,23 @@ function NavBar() {
               }`}>
               <ul className="full_height nav_height ">{/** navbar full-height<768 & nav_height >768 */}
                 <li className="">
-                  <Link href="#about" onClick={() => setNavbar(!navbar)}>
+                  <Link href="/" onClick={() => setNavbar(!navbar)}>
+                    Home
+                  </Link>
+                </li>
+                <li className="">
+                  <Link href="/blog" onClick={() => setNavbar(!navbar)}>
+                    Blog
+                  </Link>
+                </li>
+                <li className="">
+                  <Link href="/videos" onClick={() => setNavbar(!navbar)}>
+                    Videos
+                  </Link>
+                </li>
+                <li className="">
+                  <Link href="/about" onClick={() => setNavbar(!navbar)}>
                     About
-                  </Link>
-                </li>
-                <li className="">
-                  <Link href="#blog" onClick={() => setNavbar(!navbar)}>
-                    Blogs
-                  </Link>
-                </li>
-                <li className="">
-                  <Link href="#contact" onClick={() => setNavbar(!navbar)}>
-                    Contact
-                  </Link>
-                </li>
-                <li className="">
-                  <Link href="#projects" onClick={() => setNavbar(!navbar)}>
-                    Projects
                   </Link>
                 </li>
               </ul>

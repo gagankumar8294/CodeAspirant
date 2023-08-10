@@ -8,7 +8,7 @@ const About = () => {
             <title>CodeAspirant | About Page</title>
             <meta name='keywords' content="codeaspirant" />
         </Head>
-        <div>
+        <div style={{paddingTop:"150px"}}>
             <h1 className={styles.title}>About</h1>
             <p className={styles.text}>started server on 0.0.0.0:3000 url httplocalhos3000</p>
             <p className={styles.text}>event  compiled client and server successfully in 3.4s 164 modules</p>

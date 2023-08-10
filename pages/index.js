@@ -11,8 +11,8 @@ export default function Home() {
         <title>CodeAspirant | Home</title>
         <meta name='keywords' contents="codeaspirant" />
       </Head>
-      <div>
-        
+      <div style={{paddingTop:"150px"}}>
+        <h1>Welcome to code Aspirant</h1>
       </div>
     </>
   )
