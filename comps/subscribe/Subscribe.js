@@ -50,7 +50,7 @@ function Subscribe() {
       backgroundColor: 'rgba(230, 220, 245, 0.116)',
       // backgroundColor: 'rgba(230, 220, 245, 0.2)',
       backdropFilter: 'blur(5px)',
-      zIndex:999,
+      // zIndex:999,
       width: '600px',
       padding: '20px',
       textAlign: 'center',
