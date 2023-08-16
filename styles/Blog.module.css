@@ -4,30 +4,53 @@
 /* size decreased*/
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
-.publish {
+
+@media (max-width: 280px) {
+  .publish {
     font-family: 'DM Sans', sans-serif;
     color: magenta;
     font-size: 14px;
     font-weight: 400;
+    margin-left: 25px;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-right: 25px;
   }
-  
+    
   .main_heading {
     font-size: 38px;
-    font-weight: thin;
+    font-weight: 400;
     font-family: "EB Garamond", sans-serif;
     line-height: 44px;
     letter-spacing: 1.2px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-right: 25px;
   }
 
   .paragraph {
     font-family: "EB Garamond", sans-seri;
-    line-height: 32px;
-    font-weight: thin;
+    line-height: 20px;
+    font-weight: 400;
     text-align: left;
-    font-size: 20px;
+    font-size: 18px;
     line-height: 32px;
     letter-spacing: 0.5px;
-    margin-left: 18px;
+    margin-left: 25px;
+    margin-right: 25px;
     transition-delay: 0s, 0s, 0s, 0s, 0s;
     transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.4
   }
+}
+
+.social li {
+  width: 40px;
+  height: 40px;
+  margin-right: 10px;
+  text-align: center;
+}
+
+.social ul {
+  display: flex;
+  text-align: center;
+}
