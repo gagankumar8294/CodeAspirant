@@ -8,7 +8,7 @@
 @media (max-width: 280px) {
   .publish {
     font-family: 'DM Sans', sans-serif;
-    color: magenta;
+    color: #FF10FF;
     font-size: 14px;
     font-weight: 400;
     margin-left: 25px;
@@ -38,19 +38,112 @@
     letter-spacing: 0.5px;
     margin-left: 25px;
     margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
     transition-delay: 0s, 0s, 0s, 0s, 0s;
     transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.4
   }
-}
 
-.social li {
-  width: 40px;
-  height: 40px;
-  margin-right: 10px;
-  text-align: center;
-}
+  .svg {
+    width: 25px;
+    height: 25px;
+    fill: #FF10FF;
+  }
+  
+  .so_sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
 
-.social ul {
-  display: flex;
-  text-align: center;
+  .social li {
+    margin-left:7px;
+    margin-right: 7px;
+  }
+  
+  .social ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image_wh {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+  
+  .yt_vid {
+    width: 100%;
+    height: auto;
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+
+  .blog_audio_text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .blog_audio {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .download_our_app {
+    border: solid 1.5px rgb(229, 229, 229);
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+  }
+
+  .community {
+    border-top: 1px solid #fff;
+  }
+
+   .community h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    height: 150px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+   .comm_h4_heading {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 23px;
+    font-weight: 600;
+    height: 27.5938px;
+    line-height: 27.6px;
+    margin-block-end: 16px;
+    margin-block-start: 8px;
+    text-align: center;
+   }
+
+   .community p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 71.3906px;
+    line-height: 23.8px; 
+   }
+
 }
