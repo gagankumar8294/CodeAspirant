@@ -2,6 +2,8 @@ import React from 'react';
 import styles from "../../styles/Blog.module.css";
 import FacebookComments from '../../comps/comments/FacebookComments';
 import { useState, useEffect } from 'react';
+import SVGIcons from '../../comps/SVGIcons'; // Adjust the path
+
 
 const Grave = () => {
   const [isClient, setIsClient] = useState(false);
@@ -24,6 +26,24 @@ const Grave = () => {
       <div style={{textAlign:"center",marginTop:"20px",marginBottom:"20px"}}>
         <p>social icons here</p>
       </div>
+      <section>
+        <div className={styles.social}>
+          <ul>
+            <li style={{backgroundColor:"red"}}>
+              {/* <svg className={styles.facebook_icon}>
+                <use xlink:href="/symbol-defs.svg#icon-facebook2"></use>
+              </svg> */}
+              <svg className={styles.facebook_icon}>
+              <use xlinkHref="#icon-facebook2"></use>
+            </svg>
+            </li>
+            <li>twitter</li>
+            <li>linkedin</li>
+            <li>what's app</li>
+            <li>email</li>
+          </ul>
+        </div>
+      </section>
 
 
       <div className='interact_section'>
