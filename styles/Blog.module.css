@@ -5,6 +5,270 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
 
+/* YT setup */
+@media (max-width: 290px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 160px;
+  }
+}
+@media (max-width: 300px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 95%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 170px;
+  }
+}
+@media (max-width: 320px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    height: 175px;
+  }
+}
+@media (max-width: 330px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    height: 175px;
+  }
+}
+@media (max-width: 350px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    height: 185px;
+  }
+}
+@media (max-width: 390px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 205px;
+  }
+}
+@media (max-width: 410px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 215px;
+  }
+}
+@media (max-width: 440px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 230px;
+  }
+}
+@media (max-width: 480px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 250px;
+  }
+}
+@media (max-width: 515px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 270px;
+  }
+}
+@media (max-width: 550px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 290px;
+  }
+}
+@media (max-width: 590px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 310px;
+  }
+}
+@media (max-width: 625px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 330px;
+  }
+}
+@media (max-width: 665px) {
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 350px;
+  }
+}
+/*----yt_setup----*/
+
 @media (max-width: 280px) {
   .publish {
     font-family: 'DM Sans', sans-serif;
@@ -78,12 +342,22 @@
     margin-top: 25px;
     margin-bottom: 25px;
   }
-  
-  .yt_vid {
-    width: 100%;
-    height: auto;
+
+  .yt_vid_border {
     margin-top: 35px;
     margin-bottom: 35px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 95%;
+    height: auto;
   }
 
   .blog_audio_text {
@@ -111,6 +385,11 @@
     padding-top: 80px;
     padding-bottom: 80px;
     text-align: center;
+    transition: border 0.3s ease-in-out;
+  }
+
+  .download_our_app:hover {
+    border: solid 1.5px rgb(31, 146, 31);
   }
 
   .community {
@@ -127,14 +406,11 @@
     margin-top: 50px;
    }
 
-   .comm_h4_heading {
-    font-family: "EB Garamond", sans-serif;
-    font-size: 23px;
+   .community h3 {
+    font-size: 30px;
     font-weight: 600;
-    height: 27.5938px;
+    font-family: "EB Garamond", sans-serif;
     line-height: 27.6px;
-    margin-block-end: 16px;
-    margin-block-start: 8px;
     text-align: center;
    }
 
@@ -143,7 +419,955 @@
     font-size: 14px;
     font-weight: 400;
     height: 71.3906px;
-    line-height: 23.8px; 
+    line-height: 1.7em;
+    margin-top: 20px;
+   }
+
+   .community h5 {
+    margin-top: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    line-height: 1em;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .community h5:hover {
+    background-color: yellow;
+   }
+
+   .paragraph_link {
+    color: #FF10FF;
+    font-size: 20px;
+    font-family: "EB Garamond", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+   }
+
+   .h2_heading {
+    font-size: 2rem;
+    font-family: "EB Garamond", Sans-serif;
+    font-weight: 700;
+    line-height: "38.4px";
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 45px;
+    margin-bottom: 30px;
    }
 
 }
+
+ @media (max-width: 300px) {
+  .publish {
+    font-family: 'DM Sans', sans-serif;
+    color: #FF10FF;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 25px;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+    
+  .main_heading {
+    font-size: 38px;
+    font-weight: 400;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 44px;
+    letter-spacing: 1.2px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+
+  .paragraph {
+    font-family: "EB Garamond", sans-seri;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition-delay: 0s, 0s, 0s, 0s, 0s;
+    transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.4
+  }
+
+  .svg {
+    width: 25px;
+    height: 25px;
+    fill: #FF10FF;
+  }
+  
+  .so_sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .social li {
+    margin-left:7px;
+    margin-right: 7px;
+  }
+  
+  .social ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image_wh {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+
+  .blog_audio_text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .blog_audio {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .download_our_app {
+    border: solid 1.5px rgb(229, 229, 229);
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+  }
+
+  .download_our_app:hover {
+    border: solid 1.5px rgb(31, 146, 31);
+  }
+
+  .community {
+    border-top: 1px solid #fff;
+  }
+
+   .community h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    height: 150px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+   .community h3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 27.6px;
+    text-align: center;
+   }
+
+   .community p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 71.3906px;
+    line-height: 1.7em;
+    margin-top: 20px;
+   }
+
+   .community h5 {
+    margin-top: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    line-height: 1em;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .community h5:hover {
+    background-color: yellow;
+   }
+
+   .paragraph_link {
+    color: #FF10FF;
+    font-size: 20px;
+    font-family: "EB Garamond", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+   }
+
+   .h2_heading {
+    font-size: 2rem;
+    font-family: "EB Garamond", Sans-serif;
+    font-weight: 700;
+    line-height: "38.4px";
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+   }
+
+}
+
+@media (max-width: 320px) {
+  .publish {
+    font-family: 'DM Sans', sans-serif;
+    color: #FF10FF;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 25px;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+    
+  .main_heading {
+    font-size: 38px;
+    font-weight: 400;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 44px;
+    letter-spacing: 1.2px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+
+  .paragraph {
+    font-family: "EB Garamond", sans-seri;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition-delay: 0s, 0s, 0s, 0s, 0s;
+    transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.4
+  }
+
+  .svg {
+    width: 25px;
+    height: 25px;
+    fill: #FF10FF;
+  }
+  
+  .so_sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .social li {
+    margin-left:7px;
+    margin-right: 7px;
+  }
+  
+  .social ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image_wh {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .blog_audio_text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .blog_audio {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .download_our_app {
+    border: solid 1.5px rgb(229, 229, 229);
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+  }
+
+  .download_our_app:hover {
+    border: solid 1.5px rgb(31, 146, 31);
+  }
+
+  .community {
+    border-top: 1px solid #fff;
+  }
+
+   .community h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    height: 150px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+   .community h3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 27.6px;
+    text-align: center;
+   }
+
+   .community p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 71.3906px;
+    line-height: 1.7em;
+    margin-top: 20px;
+   }
+
+   .community h5 {
+    margin-top: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    line-height: 1em;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .community h5:hover {
+    background-color: yellow;
+   }
+
+   .paragraph_link {
+    color: #FF10FF;
+    font-size: 20px;
+    font-family: "EB Garamond", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+   }
+
+   .h2_heading {
+    font-size: 2rem;
+    font-family: "EB Garamond", Sans-serif;
+    font-weight: 700;
+    line-height: "38.4px";
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+   }
+
+}
+
+@media (max-width: 350px) {
+  .publish {
+    font-family: 'DM Sans', sans-serif;
+    color: #FF10FF;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 25px;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+  
+  .main_heading {
+    font-size: 38px;
+    font-weight: 400;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 44px;
+    letter-spacing: 1.2px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+
+  .paragraph {
+    font-family: "EB Garamond", sans-seri;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition-delay: 0s, 0s, 0s, 0s, 0s;
+    transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.4
+  }
+
+  .svg {
+    width: 25px;
+    height: 25px;
+    fill: #FF10FF;
+  }
+
+  .so_sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .social li {
+    margin-left:7px;
+    margin-right: 7px;
+  }
+
+  .social ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .center-container {
+    display: flex;
+    justify-content: center;
+  }
+
+  .image_wh {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .blog_audio_text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .blog_audio {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  } 
+
+  .download_our_app {
+    border: solid 1.5px rgb(229, 229, 229);
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+  }
+
+  .download_our_app:hover {
+    border: solid 1.5px rgb(31, 146, 31);
+  }
+
+  .community {
+    border-top: 1px solid #fff;
+  }
+
+   .community h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    height: 150px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+   .community h3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 27.6px;
+    text-align: center;
+   }
+
+   .community p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 71.3906px;
+    line-height: 1.7em;
+    margin-top: 20px;
+   }
+
+   .community h5 {
+    margin-top: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    line-height: 1em;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .community h5:hover {
+    background-color: yellow;
+   }
+
+   .paragraph_link {
+    color: #FF10FF;
+    font-size: 20px;
+    font-family: "EB Garamond", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+   } 
+ 
+   .h2_heading {
+    font-size: 2rem;
+    font-family: "EB Garamond", Sans-serif;
+    font-weight: 700;
+    line-height: "38.4px";
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+   }
+}
+ 
+@media (max-width: 380px) {
+  .publish {
+    font-family: 'DM Sans', sans-serif;
+    color: #FF10FF;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 25px;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+    
+  .main_heading {
+    font-size: 38px;
+    font-weight: 400;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 44px;
+    letter-spacing: 1.2px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+
+  .paragraph {
+    font-family: "EB Garamond", sans-seri;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition-delay: 0s, 0s, 0s, 0s, 0s;
+    transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.4
+  }
+
+  .svg {
+    width: 25px;
+    height: 25px;
+    fill: #FF10FF;
+  }
+  
+  .so_sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .social li {
+    margin-left:7px;
+    margin-right: 7px;
+  }
+  
+  .social ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image_wh {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .yt_vid_border {
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+  }
+  
+  .yt_vid {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: 205px;
+  }
+
+  .blog_audio_text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .blog_audio {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .download_our_app {
+    border: solid 1.5px rgb(229, 229, 229);
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+  }
+
+  .download_our_app:hover {
+    border: solid 1.5px rgb(31, 146, 31);
+  }
+
+  .community {
+    border-top: 1px solid #fff;
+  }
+
+   .community h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    height: 150px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+   .community h3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 27.6px;
+    text-align: center;
+   }
+
+   .community p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 71.3906px;
+    line-height: 1.7em;
+    margin-top: 20px;
+   }
+
+   .community h5 {
+    margin-top: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    line-height: 1em;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .community h5:hover {
+    background-color: yellow;
+   }
+
+   .paragraph_link {
+    color: #FF10FF;
+    font-size: 20px;
+    font-family: "EB Garamond", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+   }
+
+   .h2_heading {
+    font-size: 2rem;
+    font-family: "EB Garamond", Sans-serif;
+    font-weight: 700;
+    line-height: "38.4px";
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+   }
+
+}
+
+@media (max-width: 800px) {
+  .publish {
+    font-family: 'DM Sans', sans-serif;
+    color: #FF10FF;
+    font-size: 14px;
+    font-weight: 400;
+    margin-left: 25px;
+    line-height: 21px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+    
+  .main_heading {
+    font-size: 38px;
+    font-weight: 400;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 44px;
+    letter-spacing: 1.2px;
+    margin-left: 25px;
+    margin-bottom: 20px;
+    margin-right: 25px;
+  }
+
+  .paragraph {
+    font-family: "EB Garamond", sans-seri;
+    line-height: 20px;
+    font-weight: 400;
+    text-align: left;
+    font-size: 18px;
+    line-height: 32px;
+    letter-spacing: 0.5px;
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 25px;
+    margin-bottom: 25px;
+    transition-delay: 0s, 0s, 0s, 0s, 0s;
+    transition-duration: 0.3s, 0.3s, 0.3s, 0.3s, 0.4
+  }
+
+  .svg {
+    width: 25px;
+    height: 25px;
+    fill: #FF10FF;
+  }
+  
+  .so_sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .social li {
+    margin-left:7px;
+    margin-right: 7px;
+  }
+  
+  .social ul {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .center-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .image_wh {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    height: auto;
+    margin-top: 25px;
+    margin-bottom: 25px;
+  }
+
+  .blog_audio_text {
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .blog_audio {
+    width: 90%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 10px;
+    margin-bottom: 35px;
+  }
+  
+  .download_our_app {
+    border: solid 1.5px rgb(229, 229, 229);
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+  }
+
+  .download_our_app:hover {
+    border: solid 1.5px rgb(31, 146, 31);
+  }
+
+  .community {
+    border-top: 1px solid #fff;
+  }
+
+   .community h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    height: 150px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+   .community h3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 27.6px;
+    text-align: center;
+   }
+
+   .community p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 71.3906px;
+    line-height: 1.7em;
+    margin-top: 20px;
+   }
+
+   .community h5 {
+    margin-top: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    line-height: 1em;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .community h5:hover {
+    background-color: yellow;
+   }
+
+   .paragraph_link {
+    color: #FF10FF;
+    font-size: 20px;
+    font-family: "EB Garamond", Sans-serif;
+    font-size: 21px;
+    font-weight: 400;
+   }
+
+   .h2_heading {
+    font-size: 2rem;
+    font-family: "EB Garamond", Sans-serif;
+    font-weight: 700;
+    line-height: "38.4px";
+    margin-left: 25px;
+    margin-right: 25px;
+    margin-top: 45px;
+    margin-bottom: 30px;
+   }
+
+} 
