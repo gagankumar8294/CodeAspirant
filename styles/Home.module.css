@@ -22,10 +22,208 @@
   text-align: center;
 }
 
-
 .link {
   color: brown;
-  
   text-decoration: none;
   padding-left:5px;
+}
+
+
+.container {
+  display : flex;
+}
+
+@media (max-width: 768px) {
+  .container {
+    background-color: #2A7CA4;
+    display: flex;
+    height: 100vh;
+  }
+  
+  .leftDiv,
+  .rightDiv {
+    background-color: #a8bdc7;
+    width: 50%; /* Each div takes up 50% of the container's width */
+    box-sizing: border-box; /* Includes padding and border in the width */
+  }
+
+  .leftDiv {
+    background-color: #FFD700; /* Just an example color */
+    padding-left: 30px;
+  }
+
+  .leftDiv p {
+    margin-left: 30px;
+    margin-top: 50px;
+  }
+
+  .rightDiv {
+    flex: 1;
+    /* background-color: #000; */
+    background-color: #00BFFF; /* Just an example color */
+  }
+
+  .rightDiv img {
+    width: 95%;
+    height: auto;
+    margin-left: 10px;
+  }
+}
+
+
+
+.main_link {
+  margin-left: 0px;
+  margin-top: 100px;
+}
+
+.button_1 {
+  /* background: #2A7CA4; */
+  background: #A274A2;
+  color: rgba(255, 255, 255, 0.822);
+  border-radius: 5px;
+  padding: 0.7em 1em 0.7em 1em;
+  text-decoration: none;
+  margin-left: 23.9%;
+  font-size: 105%;
+}
+
+.button_2 {
+  /* background: #A274A2; */
+  background: #2A7CA4;
+  color: rgba(255, 255, 255, 0.822);
+  border-radius: 5px;
+  padding: 0.7em 1em 0.7em 1em;
+  text-decoration: none;
+  margin-left: 8%;
+  font-size: 105%;
+}
+
+
+@media (min-width: 1024px) {
+  .container {
+    height: 100vh;
+    display: flex;
+    padding-top: 200px;
+    /* background-color: #A274A2; */
+  }
+  .left-div, .right-div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+  .leftDiv {
+    width: 70%;
+    /* background-color: #4979ff; */
+
+  }
+  .dynamic_text {
+    padding-left: 55px;
+    font-size: 42px;
+    margin-top: 100px;
+  }
+
+  .dynamic_text2 {
+    color: #FFD700;
+    font-size: 35px;
+    /* background-color: #333; */
+    padding-left: 55px;
+    margin-top:25px;
+  }
+  .rightDiv {
+    /* background-color: #00BFFF; */
+    width: 40%;
+  }
+  .rightDiv img {
+    width: 100%;
+    height:100%;
+  }
+  .main_link {
+    /* background-color: #333; */
+    margin-left: -110px;
+  }
+
+  /* Apply the animation to the buttons */
+.main_link {
+  display: flex;
+  gap: 0px;
+}
+
+.button_1, .button_2 {
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 1s; /* Smooth transition for color change */
+}
+
+.button_1:hover {
+  background-color: #2a7ca4; /* Change color on hover */
+}
+
+.button_2 {
+  
+  background-color: #2a7ca4;
+  animation: dissolve 2s infinite alternate; /* Dissolve animation */
+}
+
+@keyframes dissolve {
+  0% {
+    background-color: #2a7ca4;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+  100% {
+    background-color: #a274a2;
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+  }
+}
+
+
+@keyframes appearDisappear {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.text_bar_pulse {
+  display: inline-block;
+  animation: appearDisappear 1s infinite; /* Adjust the duration as needed */
+}
+
+}
+
+@media (min-width: 1050px) {
+
+  .container {
+    height: 100vh;
+  }
+  .leftDiv {
+    width: 60%;
+  }
+}
+
+@media (min-width: 1105px) {
+  .rightDiv {
+    margin-left: -50px;
+  }
+}
+
+@media (min-width: 1180px) {
+  .rightDiv img {
+    width: 95%;
+  }
+  .rightDiv {
+    margin-left: -40px;
+  }
 }
