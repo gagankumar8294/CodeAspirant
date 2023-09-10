@@ -6,6 +6,7 @@ import Link from "next/link"
 import Subscribe from '../comps/subscribe/Subscribe'
 import AutoTypingText from '../comps/AutoTypingText';
 import Image from 'next/image';
+import c from ".././public/homepage/c.gif";
 
 
 const textList = ['Learn Web Development', 'Learn Essential Tech Tricks', 'We Provide Website Services',]
@@ -30,7 +31,7 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.rightDiv} style={{width:"50%"}}>
-          <Image src="/../public/homepage/c.gif" width={300} height={400} alt="CodeAspirant" />
+          <Image src={c} width={300} height={400} alt="CodeAspirant" />
         </div>  
       </div>
       <div>
