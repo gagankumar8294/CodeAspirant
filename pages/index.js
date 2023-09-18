@@ -20,18 +20,19 @@ export default function Home() {
         <meta name='keywords' contents="codeaspirant" />
       </Head>
       <div style={{paddingTop:"150px"}} className={styles.container}>  
-        <div className={styles.leftDiv}>
-          <p className={styles.dynamic_text} ><span  style={{color: "#f2f2f2", fontWeight: "bold",}}></span><span className={styles.welcome}>Welcome to </span><span className={styles.main_title}>Code Aspirant</span></p>
+      <div className={styles.leftDiv}>
+          <h4 className={styles.dynamic_text} >Welcome to<span className={styles.main_title}>Code Aspirant</span></h4>
+          <h2>Code Aspirant</h2>
           <p className={styles.dynamic_text2} >
             <span className={styles.text_bar_pulse}style={{ color: "#f2f2f2", fontWeight: "bold" }}>|</span> <AutoTypingText textList={textList} typingDelay={100} erasingDelay={30} pauseDelay={1500} />
           </p>
           <div className={styles.intro_para}>
             <p>
-              We have 3 years of experiance in Web Design & Development, we will topics from scratch also we teach essential Tech Tricks which make your life easy & efficient.
+              We have 3 years of experiance in Web Design & Development, we will topics from scratch also we teach essential Tech Tricks which make your life easy & efficient
             </p>
-            <p className="offer">
-              We are Open for<span style={{color:'yellow'}}> Website Design Services</span>.
-            </p>
+            <h4 className={styles.services}>
+              We are Open for<span style={{color:'yellow'}}> Website Design Services</span>
+            </h4>
           </div>
           <div className={styles.main_link}>
             <Link className={styles.button_1} href="/blog">Explore Blog</Link>
@@ -42,7 +43,7 @@ export default function Home() {
           <Image src={c} width={300} height={400} alt="CodeAspirant" />
         </div>  
       </div>
-      <div>
+      <div  className={styles.subscribe} style={{marginTop:"100px"}}>
         <Subscribe />
       </div>
     </>
