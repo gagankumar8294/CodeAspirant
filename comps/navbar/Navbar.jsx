@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import styles from "./navbar.module.css";
 
 function NavBar() {
   const [navbar, setNavbar] = useState(false);
@@ -25,22 +26,22 @@ function NavBar() {
               navbar ? 'navlinks_activeless768' : 'nav_notactive_less_768'
               }`}>
               <ul className="full_height nav_height ">{/** navbar full-height<768 & nav_height >768 */}
-                <li className="">
+                <li className={styles.hover_buttons}>
                   <Link href="/" onClick={() => setNavbar(!navbar)}>
                     Home
                   </Link>
                 </li>
-                <li className="">
+                <li className={styles.hover_buttons}>
                   <Link href="/blog" onClick={() => setNavbar(!navbar)}>
                     Blog
                   </Link>
                 </li>
-                <li className="">
+                <li className={styles.hover_buttons}>
                   <Link href="/videos" onClick={() => setNavbar(!navbar)}>
                     Videos
                   </Link>
                 </li>
-                <li className="">
+                <li className={styles.hover_buttons}>
                   <Link href="/about" onClick={() => setNavbar(!navbar)}>
                     About
                   </Link>
