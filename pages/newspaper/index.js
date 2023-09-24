@@ -50,7 +50,7 @@ const NewspaperComponent = () => {
           <h1  className={styles.kannada_paper_title} onClick={() => toggleContent('kannada')}>Kannada Newspapers</h1>
             {showKannadaContent && (
               <div className={styles.kannada_papers}>
-                <Kannadacomponent />
+                {/* <Kannadacomponent /> */}
                 <p>comming soon</p>
               </div>
             )}
@@ -59,7 +59,7 @@ const NewspaperComponent = () => {
           <h1 className={styles.telugu_paper_title} onClick={() => toggleContent('hindi')}>Telugu Newspapers</h1>
             {showHindiContent && (
             <div className={styles.telugu_papers}>
-              <Telugucomponent />
+              {/* <Telugucomponent /> */}
               <p>comming soon</p>
             </div>
             )}
