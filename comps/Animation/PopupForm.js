@@ -29,7 +29,8 @@ const PopupForm = () => {
   return (
     <>
       <div className={`${styles.popup} ${showForm ? styles.show : ''}`}>
-        <div className={styles['popup-content']}>
+        {/* <div className={styles['popup-content']}> */}
+        <div className={styles.popup_content}>
           <button className={styles.closeBtn} onClick={handleCloseForm}>
             &times;
           </button>
@@ -40,7 +41,7 @@ const PopupForm = () => {
             <button type="submit">Subscribe</button>
           </form> */}
           <h2>DAILY NEWSPAPERS</h2>
-          <p onClick={handleNavigateToPaper}>click Here</p>
+          <p className={styles.click_here} onClick={handleNavigateToPaper}>CLICK HERE</p>
         </div>
       </div>
     </> 
