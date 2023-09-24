@@ -8,7 +8,7 @@ import AutoTypingText from '../comps/AutoTypingText';
 import Image from 'next/image';
 import c from ".././public/homepage/c.gif";
 
-
+import PopupForm from '../comps/Animation/PopupForm';
 const textList = ['Learn Web Development', 'Learn Essential Tech Tricks', 'We Provide Website Services',]
 
 
@@ -20,6 +20,7 @@ export default function Home() {
         <meta name='keywords' contents="codeaspirant" />
       </Head>
       <div style={{paddingTop:"150px"}} className={styles.container}>  
+      <PopupForm />
       <div className={styles.leftDiv}>
           <h4 className={styles.dynamic_text} >Welcome to<span className={styles.main_title}>Code Aspirant</span></h4>
           <h2>Code Aspirant</h2>
