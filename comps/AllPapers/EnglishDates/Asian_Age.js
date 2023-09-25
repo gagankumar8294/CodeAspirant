@@ -3,6 +3,7 @@ import styles from "../english.module.css";
 import AsianAgeDay0 from "./EnglishDay/AsianAgeDate/22-09-23";
 import AsianAgeDay1 from './EnglishDay/AsianAgeDate/23-09-23';
 import AsianAgeDay2 from './EnglishDay/AsianAgeDate/24-09-23';
+import AsianAgeDay3 from './EnglishDay/AsianAgeDate/25-09-23';
 
 const AsianAgeDatesComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -15,6 +16,8 @@ const AsianAgeDatesComponent = () => {
     if (selectedDate !== null && selectedDate === date) {
       return (
         <div>
+          {/* {date === '26_09_23' && <AsianAgeDay4 />} */}
+          {date === '25_09_23' && <AsianAgeDay3 />}
           {date === '24_09_23' && <AsianAgeDay2 />}
           {date === '23_09_23' && <AsianAgeDay1 />}
           {date === '22_09_23' && <AsianAgeDay0 />}
@@ -29,6 +32,10 @@ const AsianAgeDatesComponent = () => {
       <div className={styles.daily_date} onClick={() => toggleContent('24_09_23')}>
         <h2>24-09-23</h2>
         {renderContent('24_09_23')}
+      </div>
+      <div className={styles.daily_date} onClick={() => toggleContent('25_09_23')}>
+        <h2>25-09-23</h2>
+        {renderContent('25_09_23')}
       </div>
       {/* <div className={styles.daily_date} onClick={() => toggleContent('23_09_23')}>
         <h2>23-09-23</h2>
