@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
 import styles from "../english.module.css";
 
-import FinancialExpress0 from './EnglishDay/financialDate/22-09-23 copy 2';
+import FinancialExpress0 from './EnglishDay/financialDate/26-09-23';
 import FinancialExpress1 from './EnglishDay/financialDate/23-09-23';
 import FinancialExpress2 from './EnglishDay/financialDate/24-09-23';
+import FinancialExpress3 from './EnglishDay/financialDate/25-09-23';
 
 const TheHinduDatesComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -16,6 +17,7 @@ const TheHinduDatesComponent = () => {
     if (selectedDate !== null && selectedDate === date) {
       return (
         <div>
+          {date === '25_09_23' && <FinancialExpress3 />}
           {date === '24_09_23' && <FinancialExpress2 />}
           {date === '23_09_23' && <FinancialExpress1 />}
           {date === '22_09_23' && <FinancialExpress0 />}
@@ -27,6 +29,10 @@ const TheHinduDatesComponent = () => {
 
   return (
     <>
+    <div className={styles.daily_date} onClick={() => toggleContent('25_09_23')}>
+        <h2>25-09-23</h2>
+        {renderContent('25_09_23')}
+      </div>
       <div className={styles.daily_date} onClick={() => toggleContent('24_09_23')}>
         <h2>24-09-23</h2>
         {renderContent('24_09_23')}

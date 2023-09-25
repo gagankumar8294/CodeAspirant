@@ -4,6 +4,7 @@ import styles from "../english.module.css";
 import Statesman0 from './EnglishDay/StatesmanDate/22-09-23';
 import Statesman1 from './EnglishDay/StatesmanDate/23-09-23';
 import Statesman2 from './EnglishDay/StatesmanDate/24-09-23';
+import Statesman3 from './EnglishDay/StatesmanDate/25-09-23';
 
 const TheStatesmanDatesComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -16,6 +17,7 @@ const TheStatesmanDatesComponent = () => {
     if (selectedDate !== null && selectedDate === date) {
       return (
         <div>
+           {date === '25_09_23' && <Statesman3 />}
           {date === '24_09_23' && <Statesman2 />}
           {date === '23_09_23' && <Statesman1 />}
           {date === '22_09_23' && <Statesman0 />}
@@ -27,6 +29,10 @@ const TheStatesmanDatesComponent = () => {
 
   return (
     <>
+    <div className={styles.daily_date} onClick={() => toggleContent('25_09_23')}>
+        <h2>25-09-23</h2>
+        {renderContent('25_09_23')}
+      </div>
       <div className={styles.daily_date} onClick={() => toggleContent('24_09_23')}>
         <h2>24-09-23</h2>
         {renderContent('24_09_23')}
