@@ -12,6 +12,8 @@ import TheTelegraphDatesComponent from './EnglishDates/TheTelegraph';
 import TheStatesmanDatesComponent from './EnglishDates/The_Statesman';
 import AsianAgeDatesComponent from './EnglishDates/Asian_Age';
 import FreePressJournalDatesComponent from './EnglishDates/Free_Press_journal';
+import HiindustanTimesDatesComponent from './EnglishDates/Hindustan_Times';
+import BusinessStandardsDatesComponent from './EnglishDates/Business_Standards';
 
 const Englishcomponent = () => {
   const [selectedPaper, setSelectedPaper] = useState(null);
@@ -33,6 +35,28 @@ const Englishcomponent = () => {
 
   return (
     <>
+    <div className={styles.Business_Standards}>
+        <h2 className={styles.individual_paper} onClick={() => toggleContent('Business_Standards')}>
+          Business Standards
+        </h2>
+        {/* {renderContent('the_hindu')} */}
+        {selectedPaper == "Business_Standards" && (
+            <div>
+                <BusinessStandardsDatesComponent />
+            </div>
+        )}
+      </div>
+      <div className={styles.Hindustan_Times}>
+        <h2 className={styles.individual_paper} onClick={() => toggleContent('Hindustan_Times')}>
+        Hindustan Times
+        </h2>
+        {/* {renderContent('the_hindu')} */}
+        {selectedPaper == "Hindustan_Times" && (
+            <div>
+                <HiindustanTimesDatesComponent />
+            </div>
+        )}
+      </div>
       <div className={styles.the_hindu}>
         <h2 className={styles.individual_paper} onClick={() => toggleContent('the_hindu')}>
           The Hindu
