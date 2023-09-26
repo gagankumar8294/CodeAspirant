@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../../english.module.css";
 
-const TheTrubine2 = () => {
+const TheTrubine4 = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -26,9 +26,9 @@ const TheTrubine2 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/1jEaz0F_0R1_a_zjHxrm-h5cWiMjEBOSk/preview" />
+      "https://drive.google.com/file/d/1tZdbj5hz3I6YgqZ7Twc0anqu0msqlHcf/preview" />
     </div>
   );
 };
 
-export default TheTrubine2;
+export default TheTrubine4;

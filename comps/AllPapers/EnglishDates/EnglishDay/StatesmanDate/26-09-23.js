@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../../english.module.css";
 
-const Statesman2 = () => {
+const Statesman4 = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -26,9 +26,9 @@ const Statesman2 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/1oUDqS0f4NRIa-UstWrAyUgGxXKb636i2/preview" />
+      "https://drive.google.com/file/d/1Xff-P_gvx_VmKhRurj2qhV36ZAFMVtMZ/preview" />
     </div>
   );
 };
 
-export default Statesman2;
+export default Statesman4;

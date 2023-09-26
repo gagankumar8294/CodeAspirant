@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../../english.module.css";
 
-const EconomicTimesDay2 = () => {
+const EconomicTimesDay4 = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -26,9 +26,9 @@ const EconomicTimesDay2 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/1IK_0h5aYwAeoPF22p6cGOkquch7-cNJa/preview" />
+      "https://drive.google.com/file/d/15ARPqXxDvhQP2rJHK2Yy0WqnzEMKmw-x/preview" />
     </div>
   );
 };
 
-export default EconomicTimesDay2;
+export default EconomicTimesDay4;
