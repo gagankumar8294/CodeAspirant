@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../../english.module.css";
 
-const TheTimesOfIndiaDay0 = () => {
+const TheTimesOfIndiaDay4 = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -25,9 +25,10 @@ const TheTimesOfIndiaDay0 = () => {
           <span>Loading PDF...</span>
         </div>
       )}
-      <iframe className={styles.iframe_dimensions} src="https://drive.google.com/file/d/1bgXSWUoIjE3DQyQz5ZONIuvlbw3oYF8F/preview" />
+      <iframe className={styles.iframe_dimensions} src=
+      "https://drive.google.com/file/d/1vuW0Jpc4eaYmuxiQ3jWJttHUE00pyvtC/preview" />
     </div>
   );
 };
 
-export default TheTimesOfIndiaDay0;
+export default TheTimesOfIndiaDay4;

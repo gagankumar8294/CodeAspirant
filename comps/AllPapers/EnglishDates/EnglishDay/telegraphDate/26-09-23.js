@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../../english.module.css";
 
-const AsianAgeDay4 = () => {
+const Telegraph4 = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -26,9 +26,9 @@ const AsianAgeDay4 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/1i1Sj2vth9uHFhA7e69aII71uK6DLx32O/preview" />
+      "https://drive.google.com/file/d/1McjvsO5vLRK0RvPvJtkB93_Bg_YMPycL/preview" />
     </div>
   );
 };
 
-export default AsianAgeDay4;
+export default Telegraph4;

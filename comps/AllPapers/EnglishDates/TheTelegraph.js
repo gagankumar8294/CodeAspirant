@@ -4,6 +4,7 @@ import styles from "../english.module.css";
 import Telegraph0 from './EnglishDay/telegraphDate/22-09-23';
 import Telegraph1 from './EnglishDay/telegraphDate/23-09-23';
 import Telegraph2 from './EnglishDay/telegraphDate/24-09-23';
+import Telegraph4 from './EnglishDay/telegraphDate/26-09-23';
 
 const TheTelegraphDatesComponent = () => {
   const [selectedDate, setSelectedDate] = useState(null);
@@ -16,6 +17,7 @@ const TheTelegraphDatesComponent = () => {
     if (selectedDate !== null && selectedDate === date) {
       return (
         <div>
+          {date === '26_09_23' && <Telegraph4 />}
           {date === '24_09_23' && <Telegraph2 />}
           {date === '23_09_23' && <Telegraph1 />}
           {date === '22_09_23' && <Telegraph0 />}
@@ -27,6 +29,10 @@ const TheTelegraphDatesComponent = () => {
 
   return (
     <>
+    <div className={styles.daily_date} onClick={() => toggleContent('26_09_23')}>
+        <h2>26-09-23</h2>
+        {renderContent('26_09_23')}
+      </div>
       <div className={styles.daily_date} onClick={() => toggleContent('24_09_23')}>
         <h2>24-09-23</h2>
         {renderContent('24_09_23')}
