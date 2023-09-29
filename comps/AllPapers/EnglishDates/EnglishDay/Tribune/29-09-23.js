@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import styles from "../../../english.module.css";
 
-const FinancialExpress0 = () => {
+const TheTrubine7 = () => {
   const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
@@ -25,9 +25,11 @@ const FinancialExpress0 = () => {
           <span>Loading PDF...</span>
         </div>
       )}
-      <iframe className={styles.iframe_dimensions} src="https://drive.google.com/file/d/1bgXSWUoIjE3DQyQz5ZONIuvlbw3oYF8F/preview" />
+      <iframe className={styles.iframe_dimensions} src=
+      "https://drive.google.com/file/d/1R7BA6SV9CYsq67zn3VvkXVEff9n3AyAh/preview"
+      />
     </div>
   );
 };
 
-export default FinancialExpress0;
+export default TheTrubine7;

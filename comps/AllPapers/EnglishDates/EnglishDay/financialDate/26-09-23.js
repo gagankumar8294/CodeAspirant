@@ -26,7 +26,8 @@ const FinancialExpress4 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/1z7GLszu1rT60MPnKVmDskWqZneTOX1XH/preview" />
+      "https://drive.google.com/file/d/1z7GLszu1rT60MPnKVmDskWqZneTOX1XH/preview"
+      />
     </div>
   );
 };

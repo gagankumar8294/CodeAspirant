@@ -26,7 +26,8 @@ const DeccanDay2 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/11pLk0g_IG1K69waOG2aryhYEmwj0fMMK/preview" />
+      "https://drive.google.com/file/d/11pLk0g_IG1K69waOG2aryhYEmwj0fMMK/preview"
+      />
     </div>
   );
 };

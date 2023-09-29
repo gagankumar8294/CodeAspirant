@@ -26,7 +26,8 @@ const EconomicTimesDay4 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/15ARPqXxDvhQP2rJHK2Yy0WqnzEMKmw-x/preview" />
+      "https://drive.google.com/file/d/15ARPqXxDvhQP2rJHK2Yy0WqnzEMKmw-x/preview"
+      />
     </div>
   );
 };
