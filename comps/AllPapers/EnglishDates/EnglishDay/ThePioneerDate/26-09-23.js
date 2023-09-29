@@ -26,7 +26,8 @@ const ThePioneer4 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/1ePUyF_qquYRmaOYL9d1XxIFnxIGl31bF/preview" />
+      "https://drive.google.com/file/d/1ePUyF_qquYRmaOYL9d1XxIFnxIGl31bF/preview"
+      />
     </div>
   );
 };

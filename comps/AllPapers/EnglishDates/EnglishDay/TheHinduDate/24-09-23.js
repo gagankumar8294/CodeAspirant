@@ -25,7 +25,9 @@ const TheHinduDay2 = () => {
           <span>Loading PDF...</span>
         </div>
       )}
-      <iframe className={styles.iframe_dimensions} src="https://drive.google.com/file/d/1bgXSWUoIjE3DQyQz5ZONIuvlbw3oYF8F/preview" />
+      <iframe className={styles.iframe_dimensions} src=
+      "https://drive.google.com/file/d/1bgXSWUoIjE3DQyQz5ZONIuvlbw3oYF8F/preview"
+      />
     </div>
   );
 };

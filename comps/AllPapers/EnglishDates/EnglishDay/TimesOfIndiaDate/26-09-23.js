@@ -26,7 +26,8 @@ const TheTimesOfIndiaDay4 = () => {
         </div>
       )}
       <iframe className={styles.iframe_dimensions} src=
-      "https://drive.google.com/file/d/1vuW0Jpc4eaYmuxiQ3jWJttHUE00pyvtC/preview" />
+      "https://drive.google.com/file/d/1vuW0Jpc4eaYmuxiQ3jWJttHUE00pyvtC/preview"
+      />
     </div>
   );
 };
