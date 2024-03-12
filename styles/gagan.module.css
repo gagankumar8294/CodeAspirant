@@ -27,3 +27,39 @@
     border-radius: 50%;
     overflow: hidden;
 }
+
+.linkedinLogo {
+    display: flex;
+    align-items: center;
+    margin-top: -10px;
+    margin-bottom: 10px;
+    text-decoration: none;
+}
+
+.githubLogo {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    text-decoration: none;
+}
+
+.linkedinSvg {
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    transition: fill 0.3s ease; /* Smooth transition for the fill color */
+    margin-right: 10px;
+}
+
+.githubSvg{
+    width: 40px; /* Adjust size as needed */
+    height: 40px; /* Adjust size as needed */
+    transition: fill 0.3s ease; /* Smooth transition for the fill color */
+}
+
+.linkedinSvg:hover {
+    fill: blue; /* Change the fill color on hover */
+}
+
+.containers {
+    display: flex;
+}
