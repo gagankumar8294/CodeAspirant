@@ -43,7 +43,7 @@ const gagankumar = () => {
                     <p className={styles.text}>I strive to create engaging and user-friendly web experiences.</p>
             </div>
                                     <div style={{ textAlign: 'center', padding: '20px' }}>
-  <h2 style={{ marginBottom: '20px' }}>Projects</h2>
+  <h2 className={styles.title} style={{ marginBottom: '20px' }}>Projects</h2>
                                     <a href="https://bizzwizz.netlify.app/" style={{ display: 'block', marginBottom: '10px', color: '#1a0dab', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
     https://syedmujahid.vercel.app/
   </a>
