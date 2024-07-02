@@ -29,7 +29,7 @@ export default function Home() {
           </p>
           <div className={styles.intro_para}>
             <p>
-              We have 3 years of experiance in Web Design & Development, we will topics from scratch also we teach essential Tech Tricks which make your life easy & efficient
+              With 3 years of expertise in Web Design & Development, we teach you everything from scratch and share essential tech tricks to make your life easier and more efficient
             </p>
             <h4 className={styles.services}>
               We are Open for<span style={{color:'yellow'}}> Website Design Services</span>
