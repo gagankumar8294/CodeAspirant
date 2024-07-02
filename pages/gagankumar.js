@@ -44,6 +44,9 @@ const gagankumar = () => {
             </div>
                                     <div style={{ textAlign: 'center', padding: '20px' }}>
   <h2 style={{ marginBottom: '20px' }}>Projects</h2>
+                                    <a href="https://bizzwizz.netlify.app/" style={{ display: 'block', marginBottom: '10px', color: '#1a0dab', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
+    https://syedmujahid.vercel.app/
+  </a>
   <a href="https://bizzwizz.netlify.app/" style={{ display: 'block', marginBottom: '10px', color: '#1a0dab', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
     https://bizzwizz.netlify.app/
   </a>
