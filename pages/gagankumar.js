@@ -42,6 +42,18 @@ const gagankumar = () => {
                     <p className={styles.text}>As a web developer, I bring creativity and functionality together.</p>
                     <p className={styles.text}>I strive to create engaging and user-friendly web experiences.</p>
             </div>
+                                    <div style={{ textAlign: 'center', padding: '20px' }}>
+  <h2 style={{ marginBottom: '20px' }}>Projects</h2>
+  <a href="https://bizzwizz.netlify.app/" style={{ display: 'block', marginBottom: '10px', color: '#1a0dab', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
+    https://bizzwizz.netlify.app/
+  </a>
+  <a href="https://digisolve-fawn.vercel.app/" style={{ display: 'block', marginBottom: '10px', color: '#1a0dab', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
+    https://digisolve-fawn.vercel.app/
+  </a>
+  <a href="https://codeaspirant.vercel.app/gagankumar" style={{ display: 'block', marginBottom: '10px', color: '#1a0dab', textDecoration: 'none' }} target="_blank" rel="noopener noreferrer">
+    https://codeaspirant.vercel.app/gagankumar
+  </a>
+</div>
         </>
     )
 }
