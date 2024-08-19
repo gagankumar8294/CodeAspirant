@@ -2,6 +2,7 @@ import Head from 'next/head'
 // import Navbar from '../comps/Navbar'
 // import Footer from "../comps/Footer"
 import styles from '../styles/Home.module.css'
+import styles from '../styles/HomePage/servicesSection.module.css';
 import Link from "next/link"
 import Subscribe from '../comps/subscribe/Subscribe'
 import AutoTypingText from '../comps/AutoTypingText';
