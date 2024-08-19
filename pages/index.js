@@ -2,7 +2,7 @@ import Head from 'next/head'
 // import Navbar from '../comps/Navbar'
 // import Footer from "../comps/Footer"
 import styles from '../styles/Home.module.css'
-import styles from '../styles/HomePage/servicesSection.module.css';
+import serstyles from '../styles/HomePage/servicesSection.module.css';
 import Link from "next/link"
 import Subscribe from '../comps/subscribe/Subscribe'
 import AutoTypingText from '../comps/AutoTypingText';
@@ -47,9 +47,23 @@ export default function Home() {
         </div>  
       </div>
 
-      
+      {/* Wave SVG */}
+    <div className={serstyles.waveContainer}>
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 1440 320"
+        className={serstyles.wave}
+      >
+        <path
+          fill="#FFFF00" // Adjust to your branding color
+          d="M0,64L80,85.3C160,107,320,149,480,160C640,171,800,149,960,133.3C1120,117,1280,107,1360,101.3L1440,96V320H1360C1280,320,1120,320,960,320C800,320,640,320,480,320C320,320,160,320,80,320H0V64Z"
+        ></path>
+      </svg>
+    </div>
+
+
       {/* New Section for SEO-Optimized Content */}
-      <div className={styles.servicesSection}>
+      {/* <div className={serstyles.servicesSection}>
         <h2>Our Services</h2>
         <p>
           At CodeAspirant, we specialize in creating modern, responsive websites tailored to your needs. Whether you need a portfolio, business website, or an e-commerce platform, we have the expertise to bring your vision to life.
@@ -65,15 +79,15 @@ export default function Home() {
           Based in Bangalore, we offer personalized web development and design services that cater to local businesses. Our commitment to quality and customer satisfaction sets us apart.
         </p>
 
-        <div className={styles.ctaSection}>
+        <div className={serstyles.ctaSection}>
           <h2>Ready to Start Your Project?</h2>
           <p>
             Contact CodeAspirant today to discuss your web development needs. Whether you need a brand-new website or want to revamp an existing one, we’re here to help.
           </p>
-          <Link href="/contact" className={styles.contactLink}>Get in Touch</Link>
+          <Link href="/contact" className={serstyles.contactLink}>Get in Touch</Link>
         </div>
-      </div>
-      <div  className={styles.subscribe} style={{marginTop:"100px"}}>
+      </div> */}
+      <div  className={serstyles.subscribe} style={{marginTop:"100px"}}>
         <Subscribe />
       </div>
     </>
