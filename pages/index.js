@@ -16,8 +16,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CodeAspirant | Home</title>
-        <meta name='keywords' contents="codeaspirant" />
+        <title>CodeAspirant - Professional Web Developer in Bangalore | Web Design & Website Services</title>
+        <meta name='keywords' content='CodeAspirant, web developer in Bangalore, web designer, website creator, web design services, website development' />
+        <meta name='description' content='CodeAspirant offers professional web development and design services in Bangalore. Learn web development, explore tech tricks, and avail our website creation services.' />
       </Head>
       <div style={{paddingTop:"150px"}} className={styles.container}>  
       <PopupForm />
@@ -41,8 +42,35 @@ export default function Home() {
           </div>
         </div>
         <div className={styles.rightDiv} style={{width:"50%"}}>
-          <Image src={c} width={300} height={400} alt="CodeAspirant" />
+          <Image src={c} width={300} height={400} alt="Web Development and Design by CodeAspirant" />
         </div>  
+      </div>
+
+      
+      {/* New Section for SEO-Optimized Content */}
+      <div className={styles.servicesSection}>
+        <h2>Our Services</h2>
+        <p>
+          At CodeAspirant, we specialize in creating modern, responsive websites tailored to your needs. Whether you need a portfolio, business website, or an e-commerce platform, we have the expertise to bring your vision to life.
+        </p>
+        <ul>
+          <li><strong>Website Design:</strong> Custom designs that reflect your brand’s identity.</li>
+          <li><strong>Web Development:</strong> Developing websites with clean, efficient code.</li>
+          <li><strong>SEO Optimization:</strong> Ensuring your website ranks well on search engines.</li>
+          <li><strong>Website Maintenance:</strong> Keeping your website up-to-date and running smoothly.</li>
+        </ul>
+        <h3>Why Choose Us?</h3>
+        <p>
+          Based in Bangalore, we offer personalized web development and design services that cater to local businesses. Our commitment to quality and customer satisfaction sets us apart.
+        </p>
+
+        <div className={styles.ctaSection}>
+          <h2>Ready to Start Your Project?</h2>
+          <p>
+            Contact CodeAspirant today to discuss your web development needs. Whether you need a brand-new website or want to revamp an existing one, we’re here to help.
+          </p>
+          <Link href="/contact" className={styles.contactLink}>Get in Touch</Link>
+        </div>
       </div>
       <div  className={styles.subscribe} style={{marginTop:"100px"}}>
         <Subscribe />
