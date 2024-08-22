@@ -47,6 +47,7 @@
     padding-left: 100px;
     font-size: 20px;
     margin-right: 60px;
+    margin-top: 20px;
 }
 
 .li_keypoints {
@@ -64,6 +65,8 @@
 
 .webdevContainer {
   display: flex;
+  margin-top: 5px;
+  height: 100vh;
 }
 
 .webdevleftDiv {
@@ -79,7 +82,7 @@
 .webdev {
   text-align: center;
   color: yellow;
-    font-size: 45px;
+    font-size: 40px;
 }
 
 .webdevButtons {
@@ -92,8 +95,10 @@
   border: 2px solid black;
   padding: 10px 20px;
   cursor: pointer;
-  margin: 5px;
   font-weight: bold;
+  font-size: 22px;
+  margin-top: 25px;
+  
 }
 
 .webdevButton.active {
