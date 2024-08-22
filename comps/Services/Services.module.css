@@ -3,18 +3,14 @@
 }
 
 .services_section {
-    /* background-color: aliceblue; */
-    /* transition: opacity 0.5s ease-in-out; */
     height: 85vh;
     margin-top: 50px;
-    /* opacity: 0.1; */
 }
 
 .service_heading {
     color: aliceblue;
     font-size: 50px;
     text-align: center;
-    /* padding-top: 40px; */
     font-family: "Dancing Script", cursive;
     font-weight: 1000;
 }
@@ -24,7 +20,6 @@
     display: flex;
     margin-left: 100px;
     margin-top: 40px;
-    
 }
 
 .service_leftDiv {
@@ -66,7 +61,7 @@
 .webdevContainer {
   display: flex;
   margin-top: 5px;
-  height: 100vh;
+  height: 70vh;
 }
 
 .webdevleftDiv {
@@ -82,11 +77,13 @@
 .webdev {
   text-align: center;
   color: yellow;
-    font-size: 40px;
+  font-size: 39px;
+  margin-top: 10px;
 }
 
 .webdevButtons {
   text-align: center;
+  margin-top: 0px;
 }
 
 .webdevButton {
@@ -97,7 +94,7 @@
   cursor: pointer;
   font-weight: bold;
   font-size: 22px;
-  margin-top: 25px;
+  margin-top: 30px;
   
 }
 

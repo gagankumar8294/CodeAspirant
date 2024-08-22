@@ -64,7 +64,7 @@ function Services() {
                 />
                 </div>
               <div className={servicestyles.service_rightDiv }>
-                <h3 className={servicestyles.seo}>SEO Optimization</h3>
+                <h3 className={servicestyles.seo}>SEO OPTIMIZATION</h3>
                 <ul className={servicestyles.ul}>
                     <li><span className={servicestyles.li_keypoints}><strong>Optimized Content Strategy: </strong></span>Tailored, keyword-rich content for higher search rankings.</li>
                     <li><span className={servicestyles.li_keypoints}><strong>Custom Meta Tags & Descriptions: </strong></span>Improve visibility with compelling meta content.</li>
@@ -81,7 +81,7 @@ function Services() {
       <section className={servicestyles.webdevSection}>
         <div className={servicestyles.webdevContainer}>
           <div className={servicestyles.webdevleftDiv}>
-            <h1 className={servicestyles.webdev}>Website Services</h1>
+            <h1 className={servicestyles.webdev}>WEBSITE SERVICES</h1>
             <ul className={servicestyles.webdevButtons}>
             <li>
                 <button
