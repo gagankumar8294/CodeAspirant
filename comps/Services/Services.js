@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import servicestyles from './Services.module.css';
 import brandingwebsite from './branding-website.gif'
 import Image from 'next/image';
+import image1 from '../../public/2.png';
 
 function Services() {
 
@@ -56,9 +57,10 @@ function Services() {
             <div className={servicestyles.serviceOne}>
               <div className={servicestyles.service_leftDiv}>
               <Image
-                  src=''
+                  src={image1}
                   alt='banglore seo website codeaspitant seo service'
-                  
+                //   width={200}
+                //   height={200}
                 />
                 </div>
               <div className={servicestyles.service_rightDiv }>
