@@ -2,7 +2,9 @@ import React, { useState } from "react";
 import servicestyles from './Services.module.css';
 import brandingwebsite from './branding-website.gif'
 import Image from 'next/image';
-import image1 from '../../public/2.png';
+import SEO from './seo.png';
+import PortfolioWebsite from './portfolio-website-service-banglore.png'
+import BloggingWebsite from './HurdleFreeBloging.png'
 
 function Services() {
 
@@ -57,10 +59,8 @@ function Services() {
             <div className={servicestyles.serviceOne}>
               <div className={servicestyles.service_leftDiv}>
               <Image
-                  src={image1}
+                  src={SEO}
                   alt='banglore seo website codeaspitant seo service'
-                //   width={200}
-                //   height={200}
                 />
                 </div>
               <div className={servicestyles.service_rightDiv }>
@@ -113,7 +113,7 @@ function Services() {
             {selectedService === 'portfolio' && (
                <a href="https://syedmujahid.vercel.app/" target="_blank" rel="noopener noreferrer">
               <Image 
-                src=''
+                src={PortfolioWebsite}
                 alt='Portfolio Website service in banglore'
               /></a>
             )}
@@ -122,7 +122,7 @@ function Services() {
               )}
             {selectedService === 'blogging' && (
               <Image
-              src=''
+              src={BloggingWebsite}
               alt='Blogging Website service in banglore'
             />
             )}
