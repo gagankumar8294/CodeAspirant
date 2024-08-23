@@ -1,0 +1,90 @@
+.project_section {
+    height: 70vh;
+}
+
+.service_heading {
+    color: aliceblue;
+    font-size: 50px;
+    text-align: center;
+    font-family: "Dancing Script", cursive;
+    font-weight: 1000;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    margin: auto;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: rgba(230, 220, 245, 0.082);
+    backdrop-filter: blur(3px);
+  }
+  
+  .imageContainer {
+    position: relative;
+    text-align: center;
+  }
+  
+  .image {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+    opacity: 0; /* Start with invisible */
+    transition: opacity 0.5s ease-in-out; /* Smooth transition for fade effect */
+  }
+  
+  .fadeIn {
+    opacity: 1; /* Fade in effect */
+  }
+  
+  .fadeOut {
+    opacity: 0; /* Fade out effect */
+  }
+  
+  .description {
+    margin-top: 10px;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: yellow;
+  }
+
+  .leftButton {
+    margin-left: -30px;
+  }
+  
+  .rightButton {
+    margin-right: -30px;
+  }
+
+  .leftButton, .rightButton {
+    position: absolute;
+    width: 50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: 2px solid magenta;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+    opacity: 0.8;
+  }
+  
+  .leftButton {
+    left: -40px; /* Adjust based on your design */
+  }
+  
+  .rightButton {
+    right: -40px; /* Adjust based on your design */
+  }
+  
+  .leftButton:hover, .rightButton:hover {
+    background-color: rgba(0, 0, 0, 0.7);
+  }

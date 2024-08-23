@@ -8,7 +8,7 @@ import BloggingWebsite from './HurdleFreeBloging.png'
 
 function Services() {
 
-  const [selectedService, setSelectedService] = useState('portfolio');
+  const [selectedService, setSelectedService] = useState('branding');
 
   const handleButtonClick = (service) => {
     setSelectedService(service);

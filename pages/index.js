@@ -6,6 +6,7 @@ import Image from 'next/image';
 import c from ".././public/homepage/c.gif";
 import Services from '../comps/Services/Services.js';
 import Help from '@/comps/WhoWeHelp/Help';
+import Project from '@/comps/Projects/Projects';
 
 const textList = ['Learn Web Development', 'Learn Essential Tech Tricks', 'We Provide Website Services',]
 
@@ -46,6 +47,7 @@ export default function Home() {
       </div> */}
       <Services />
       <Help />
+      <Project />
     </>
   )
 }
