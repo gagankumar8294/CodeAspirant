@@ -1,6 +1,7 @@
 .helpSection {
     height: 85vh;
     background-color: rgb(0, 0, 0);
+    margin-top: -50px;
 }
 
 .help_heading {
@@ -9,4 +10,104 @@
     text-align: center;
     font-family: "Dancing Script", cursive;
     font-weight: 1000;
+}
+
+
+.serviceOne {
+    height: 100px;
+    display: flex;
+    margin-left: 100px;
+    margin-top: 40px;
+}
+
+.service_leftDiv {
+    width: 30%; 
+}
+
+.service_rightDiv {
+    text-align: center;
+    width: 70%;
+}
+
+.li_keypoints {
+    color: magenta;
+}
+
+.seo {
+    color: yellow;
+    font-size: 40px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+.ul {
+    text-align: left ;
+    padding-left: 10px;
+    font-size: 20px;
+    margin-right: 60px;
+    margin-top: 20px;
+}
+
+.leftul {
+    text-align: left;
+    color: aliceblue;
+    width: 100%;
+    margin-left: 60px;
+}
+
+.rightul {
+    text-align: left;
+    width: 100%;
+    margin-left: -30px;
+}
+
+.ulDiv {
+    display: flex;
+    width: 100%;
+}
+
+.li_icondiv {
+    display: flex;
+}
+
+.icon {
+    margin-top: 5px;
+    height: 20px !important;
+    width: 20px !important;  
+}
+
+.service_rightDiv {
+    width: 70%;
+    margin-top: 20px;
+}
+
+.icon_color {
+    color: aqua;
+    font-size: 40px;
+    height: 40px;
+    width: 30px;
+}
+
+.icon_color .svg {
+    height: 40px;
+    width: 30px;
+}
+
+.helpSection {
+    /* background-color: magenta; */
+    background-color: rgba(230, 220, 245, 0.082);
+    backdrop-filter: blur(3px);
+    margin-left: 40px;
+    margin-right: 40px;
+    border-radius: 20px;
+}
+
+.leftDiv_img {
+    margin-top: 60px;
+    border-radius: 15px;
+}
+
+.love {
+    margin-top: 5px;
+    fill: yellow;
 }
