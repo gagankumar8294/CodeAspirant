@@ -16,7 +16,7 @@ function Help() {
                 />
                 </div>
               <div className={help.service_rightDiv }>
-                <h3 className={help.seo}>WHO WE DO HELP</h3>
+                <h3 className={help.seo}>WHO WE HELP</h3>
                 <div className={help.ulDiv}>
                     <div className={help.leftul}>
                         <ul className={help.ul}>
