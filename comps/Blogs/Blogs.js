@@ -1,19 +1,38 @@
 import React from "react";
 import styles from './Blogs.module.css';
-import { useState } from "react";
+import { useState , useRef , useEffect } from "react";
+import { db } from '../../firebaseConfig';
+import { collection, addDoc } from "firebase/firestore"; 
 
 function Blogs() {
 
-    // const [title , setTitle] = useState("");
-    // const [content , setContent] = useState("");
     const [formData, setFormData] = useState({title: "", content: "",});
     const [blogs , setBlogs] = useState([]);
+    const titleRef = useRef(null);
+    
+    useEffect(() => {
+        titleRef.current.focus();
+    }, []);
 
-    function handleSubmit(e) { 
+
+    async function handleSubmit(e) { 
         e.preventDefault();
 
         setBlogs([{title: formData.title, content: formData.content},...blogs]);
+        
+        try {
+            const docRef = await addDoc(collection(db, "blogs"), {
+                title: formData.title,
+                content: formData.content,
+                createdOn: new Date()
+            })
+            console.log("Document written with ID: ", docRef.id);
+        } catch (e) {
+            console.error("Error adding document: ", e);
+        }
+        
         setFormData({title: "" , content: ""});
+        titleRef.current.focus();
     }
 
     function removeBlog(i) {
@@ -31,6 +50,7 @@ function Blogs() {
                             <input className={styles.input}
                                 placeholder="Enter the Title Here..."
                                 value={formData.title}
+                                ref = {titleRef}
                                 onChange={(e) => setFormData({title: e.target.value, content: formData.content})}
                             />
                         </Row>
