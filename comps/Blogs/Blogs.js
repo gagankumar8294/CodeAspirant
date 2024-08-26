@@ -1,13 +1,12 @@
 import React from "react";
 import styles from './Blogs.module.css';
 import { useState , useRef , useEffect } from "react";
-import { db, storage  } from '../../firebaseConfig';
+import { db } from '../../firebaseConfig';
 import { collection, addDoc, getDocs , onSnapshot , setDoc, doc ,deleteDoc , snapshotEqual} from "firebase/firestore"; 
-import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 
 function Blogs() {
 
-    const [formData, setFormData] = useState({title: "", content: "" , image: null });
+    const [formData, setFormData] = useState({title: "", content: "",});
     const [blogs , setBlogs] = useState([]);
     const titleRef = useRef(null);
     
@@ -40,7 +39,6 @@ function Blogs() {
                     id: doc.id,
                     title: data.title,
                     content: data.content,
-                    imageUrl: data.imageUrl || null, 
                     createdOn: data.createdOn ? data.createdOn.toDate() : null  // Convert Firebase Timestamp to JS Date
                 };
             });
@@ -51,69 +49,26 @@ function Blogs() {
         return () => unsub();
     }, []);
 
-    const handleImageChange = (e) => {
-        if (e.target.files[0]) {
-            setFormData({ ...formData, image: e.target.files[0] });
-        }
-    };
 
     async function handleSubmit(e) { 
         e.preventDefault();
 
         //setBlogs([{title: formData.title, content: formData.content},...blogs]);
-        if (!formData.image) {
-            alert("Please select an image to upload.");
-            return;
+        
+        try {
+            const docRef = await addDoc(collection(db, "blogs"), {
+                title: formData.title,
+                content: formData.content,
+                createdOn: new Date()
+            })
+            console.log("Document written with ID: ", docRef.id);
+        } catch (e) {
+            console.error("Error adding document: ", e);
         }
         
-        const storageRef = ref(storage, `blog-images/${formData.image.name}`);
-        const uploadTask = uploadBytesResumable(storageRef, formData.image);
-
-        uploadTask.on(
-            "state_changed",
-            (snapshot) => {
-                // Optional: Show progress bar or upload status
-                const progress = (snapshot.bytesTransferred / snapshot.totalBytes) * 100;
-                console.log(`Upload is ${progress}% done`);
-            },
-            (error) => {
-                console.error("Error uploading image:", error);
-            },
-            async () => {
-                // Get download URL after upload
-                const downloadURL = await getDownloadURL(uploadTask.snapshot.ref);
-                try {
-                    const docRef = await addDoc(collection(db, "blogs"), {
-                        title: formData.title,
-                        content: formData.content,
-                        imageUrl: downloadURL,
-                        createdOn: new Date()
-                    });
-                    console.log("Document written with ID: ", docRef.id);
-                } catch (e) {
-                    console.error("Error adding document: ", e);
-                }
-
-                setFormData({ title: "", content: "", image: null });
-                titleRef.current.focus();
-            }
-        );
+        setFormData({title: "" , content: ""});
+        titleRef.current.focus();
     }
-
-    //     try {
-    //         const docRef = await addDoc(collection(db, "blogs"), {
-    //             title: formData.title,
-    //             content: formData.content,
-    //             createdOn: new Date()
-    //         })
-    //         console.log("Document written with ID: ", docRef.id);
-    //     } catch (e) {
-    //         console.error("Error adding document: ", e);
-    //     }
-        
-    //     setFormData({title: "" , content: ""});
-    //     titleRef.current.focus();
-    // }
 
     async function removeBlog(id) {
         // we want to filter out all the blogs except the matched blog
@@ -133,19 +88,15 @@ function Blogs() {
                                 placeholder="Enter the Title Here..."
                                 value={formData.title}
                                 ref = {titleRef}
-                                onChange={(e) => setFormData({ ...formData, title: e.target.value })}
-                            
+                                onChange={(e) => setFormData({title: e.target.value, content: formData.content})}
                             />
                         </Row>
                         <Row label="Content">
                             <textarea className={styles.content} 
                                 placeholder="Enter the Content Here..."
                                 value={formData.content}
-                                onChange={(e) => setFormData({ ...formData, content: e.target.value })}
+                                onChange={(e) => setFormData({title: formData.title, content: e.target.value})}
                             />
-                        </Row>
-                        <Row label="Image">
-                            <input type="file" onChange={handleImageChange} />
                         </Row>
                         <button className={styles.btn}>ADD</button>
                     </form>
@@ -156,8 +107,6 @@ function Blogs() {
                     <div className={styles.blog} key={i}>
                         <h3>Title: {blog.title}</h3>
                         <p>Content: {blog.content}</p>
-                        {blog.imageUrl && <img src={blog.imageUrl} alt={blog.title} style={{ width: "100px", height: "100px" }} />}
-                        
                         {blog.createdOn ? (
                             <p>Created On: {blog.createdOn.toLocaleString()}</p>  // Display formatted date
                         ) : (
