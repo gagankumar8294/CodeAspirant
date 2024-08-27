@@ -1,14 +1,15 @@
-
 import React, { useState, useRef, useEffect } from "react";
 import styles from './Blogs.module.css';
 import { db, storage } from '../../firebaseConfig';
 import { collection, addDoc, onSnapshot, deleteDoc, doc } from "firebase/firestore";
 import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
+import { useRouter } from 'next/router';
 
 function AddBlogs() {
     const [sections, setSections] = useState([{ type: "title", value: "" }]);
     const [blogs, setBlogs] = useState([]);
     const titleRef = useRef(null);
+    const router = useRouter();
 
     useEffect(() => {
         titleRef.current.focus();
@@ -21,7 +22,8 @@ function AddBlogs() {
                 return {
                     id: doc.id,
                     sections: data.sections,
-                    createdOn: data.createdOn ? data.createdOn.toDate() : null
+                    createdOn: data.createdOn ? data.createdOn.toDate() : null,
+                    slug: data.slug || data.sections.find(section => section.type === "title").value.toLowerCase().replace(/ /g, '-')
                 };
             });
             setBlogs(blogs);
@@ -55,7 +57,8 @@ function AddBlogs() {
 
         const blogData = {
             createdOn: new Date(),
-            sections: []
+            sections: [],
+            slug: sections[0].value.toLowerCase().replace(/ /g, '-') // Assuming the first section is the title
         };
 
         for (const section of sections) {
@@ -96,6 +99,10 @@ function AddBlogs() {
         const docRef = doc(db, "blogs", id);
         await deleteDoc(docRef);
     }
+
+    const handleReadMore = (blog) => {
+        router.push(`/blog/${blog.slug}`);
+    };
 
     return (
         <>
@@ -150,33 +157,31 @@ function AddBlogs() {
                     </form>
                 </div>
                 <h2>Blogs</h2>
-                {blogs.map((blog) => (
-    <div className={styles.blog} key={blog.id}>
-        {blog.sections && blog.sections.map((section, index) => {
-            if (section.type === "title") {
-                return <h3 key={index}>Title: {section.value}</h3>;
-            }
-            if (section.type === "content") {
-                return <p key={index}>Content: {section.value}</p>;
-            }
-            if (section.type === "image") {
-                return (
-                    <img
-                        key={index}
-                        src={section.value}
-                        alt="Blog Image"
-                        style={{ width: "100px", height: "100px" }}
-                    />
-                );
-            }
-            return null;
-        })}
-        {blog.createdOn && <p>Created On: {blog.createdOn.toLocaleString()}</p>}
-        <button onClick={() => removeBlog(blog.id)} className={styles.remove}>
-            Delete
-        </button>
-    </div>
-))}
+                <div className={styles.blogList}>
+                    {blogs.map((blog) => {
+                        const firstImage = blog.sections.find(section => section.type === "image");
+                        const firstTitle = blog.sections.find(section => section.type === "title");
+
+                        return (
+                            <div className={styles.blogCard} key={blog.id}>
+                                {firstImage && (
+                                    <img
+                                        src={firstImage.value}
+                                        alt="Blog Image"
+                                        style={{ width: "200px", height: "150px" }}
+                                    />
+                                )}
+                                {firstTitle && <h3>{firstTitle.value}</h3>}
+                                <button
+                                    onClick={() => handleReadMore(blog)}
+                                    className={styles.readMore}
+                                >
+                                    Read More
+                                </button>
+                            </div>
+                        );
+                    })}
+                </div>
             </section>
         </>
     );
