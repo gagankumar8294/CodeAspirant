@@ -3,7 +3,8 @@ import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import { db } from '../../firebaseConfig';
 import { collection, query, where, getDocs } from 'firebase/firestore';
-import styles from '../../comps/Blogs/Blogs.module.css'
+// import styles from '../../comps/Blogs/Blogs.module.css'
+import styles from '../../styles/Blog.module.css';
 
 const BlogDetail = () => {
     const router = useRouter();
@@ -30,7 +31,8 @@ const BlogDetail = () => {
     }
 
     return (
-        <div className={styles.blogContainer}>
+        <div style={{paddingTop:"150px"}}>
+          <div>
             <h1 className={styles.h1_heading}>
                 {/* {blog.sections.find(section => section.type === "title").value} */}
             </h1>
@@ -38,7 +40,7 @@ const BlogDetail = () => {
                 switch (section.type) {
                     case 'title':
                       return (
-                        <h1 key={index} className={styles.title}>
+                        <h1 className={styles.main_heading} key={index} >
                           {section.value}
                         </h1>
                       );
@@ -89,7 +91,7 @@ const BlogDetail = () => {
                           <img
                             src={section.value}
                             alt={section.alt || 'Blog Image'}
-                            className={styles.image}
+                            className={styles.image_wh}
                           />
                         </div>
                       );
@@ -97,6 +99,9 @@ const BlogDetail = () => {
                       return null;
                   }
             })}
+          </div>
+            
+            
         </div>
     );
 };
