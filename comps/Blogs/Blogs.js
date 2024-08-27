@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from "react";
 import styles from './Blogs.module.css';
+import style from './Blogcard.module.css';
 import { db, storage } from '../../firebaseConfig';
 import { collection, addDoc, onSnapshot, deleteDoc, doc, query, orderBy } from "firebase/firestore"; // Import query and orderBy
 import { useRouter } from 'next/router';
@@ -39,24 +40,23 @@ function Blogs() {
             <section className={styles.blogs_Section}>
                 <h2 className={styles.heading}>Blogs</h2>
                 
-                <div className={styles.blogList}>
+                <div className={style.blogList}>
                     {blogs.map((blog) => {
                         const firstImage = blog.sections.find(section => section.type === "image");
                         const firstTitle = blog.sections.find(section => section.type === "title");
 
                         return (
-                            <div className={styles.blogCard} key={blog.id}>
+                            <div className={style.blogCard} key={blog.id}>
                                 {firstImage && (
                                     <img
                                         src={firstImage.value}
-                                        alt="Blog Image"
-                                        style={{ width: "200px", height: "150px" }}
+                                        alt="Blog Image - codeaspirant"
                                     />
                                 )}
                                 {firstTitle && <h3>{firstTitle.value}</h3>}
                                 <button
                                     onClick={() => handleReadMore(blog)}
-                                    className={styles.readMore}
+                                    className={style.readMore}
                                 >
                                     Read More
                                 </button>

@@ -30,24 +30,72 @@ const BlogDetail = () => {
     }
 
     return (
-        <div>
-            <h1 className={styles.h1_heading}>{blog.sections.find(section => section.type === "title").value}</h1>
+        <div className={styles.blogContainer}>
+            <h1 className={styles.h1_heading}>
+                {/* {blog.sections.find(section => section.type === "title").value} */}
+            </h1>
             {blog.sections.map((section, index) => {
-                if (section.type === "title") return null; // Skip the title here since it's already displayed
-                if (section.type === "content") {
-                    return <p key={index}>{section.value}</p>;
-                }
-                if (section.type === "image") {
-                    return (
-                        <img
+                switch (section.type) {
+                    case 'title':
+                      return (
+                        <h1 key={index} className={styles.title}>
+                          {section.value}
+                        </h1>
+                      );
+                    case 'h1':
+                      return (
+                        <h1 key={index} className={styles.h1}>
+                          {section.value}
+                        </h1>
+                      );
+                    case 'h2':
+                      return (
+                        <h2 key={index} className={styles.h2}>
+                          {section.value}
+                        </h2>
+                      );
+                    case 'h3':
+                      return (
+                        <h3 key={index} className={styles.h3}>
+                          {section.value}
+                        </h3>
+                      );
+                    case 'content':
+                    case 'paragraph':
+                      return (
+                        <p key={index} className={styles.paragraph}>
+                          {section.value}
+                        </p>
+                      );
+                      case 'link':
+                        const linkUrl = section.value.startsWith('http://') || section.value.startsWith('https://')
+                        ? section.value
+                        : `https://${section.value}`;  
+                        // Prepend https:// if not already present
+                        return (
+                          <a
                             key={index}
+                            href={linkUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                          >
+                            {section.linkText} {/* Use section.linkText here instead of section.alt */}
+                          </a>
+                        );
+                    case 'image':
+                      return (
+                        <div key={index} className={styles.imageContainer}>
+                          <img
                             src={section.value}
-                            alt="Blog Image"
-                            style={{ width: "300px", height: "200px" }}
-                        />
-                    );
-                }
-                return null;
+                            alt={section.alt || 'Blog Image'}
+                            className={styles.image}
+                          />
+                        </div>
+                      );
+                    default:
+                      return null;
+                  }
             })}
         </div>
     );
