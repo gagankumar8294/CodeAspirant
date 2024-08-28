@@ -50,31 +50,31 @@ function Services() {
           <div className={webstyleserv.webdevleftDiv}>
             <h1 className={webstyleserv.webdev}>WEBSITE SERVICES</h1>
             <ul className={webstyleserv.webdevButtons}>
-            <li>
-                <button
-                  className={`${webstyleserv.webdevButton} ${selectedService === 'portfolio' ? servicestyles.active : ''}`}
-                  onClick={() => handleButtonClick('portfolio')}
-                >
-                  Portfolio Website
-                </button>
-              </li>
-              <li>
-                <button
-                  className={`${webstyleserv.webdevButton} ${selectedService === 'branding' ? servicestyles.active : ''}`}
-                  onClick={() => handleButtonClick('branding')}
-                >
-                  Branding Website
-                </button>
-              </li>
-              <li>
-                <button
-                  className={`${webstyleserv.webdevButton} ${selectedService === 'blogging' ? servicestyles.active : ''}`}
-                  onClick={() => handleButtonClick('blogging')}
-                >
-                  Blogging Website
-                </button>
-              </li>
-            </ul>
+  <li>
+    <button
+      className={`${webstyleserv.webdevButton} ${selectedService === 'portfolio' ? webstyleserv.active : ''}`}
+      onClick={() => handleButtonClick('portfolio')}
+    >
+      Portfolio Website
+    </button>
+  </li>
+  <li>
+    <button
+      className={`${webstyleserv.webdevButton} ${selectedService === 'branding' ? webstyleserv.active : ''}`}
+      onClick={() => handleButtonClick('branding')}
+    >
+      Branding Website
+    </button>
+  </li>
+  <li>
+    <button
+      className={`${webstyleserv.webdevButton} ${selectedService === 'blogging' ? webstyleserv.active : ''}`}
+      onClick={() => handleButtonClick('blogging')}
+    >
+      Blogging Website
+    </button>
+  </li>
+</ul>
           </div>
           <div className={webstyleserv.webdevrightDiv}>
             {selectedService === 'portfolio' && (
