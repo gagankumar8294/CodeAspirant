@@ -7,7 +7,96 @@
     color: yellow;
 }
 
-@media (min-width: 1024px) and (max-width: 1400px) {
+@media (min-width: 1000px) and (max-width: 1099px) {
+    
+    .webdevContainer {
+        display: flex;
+    }
+    
+    .webdevleftDiv {
+        width: 40%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .webdevrightDiv {
+        width: 60%;
+        margin-right: 30px;
+        margin-top: 20px !important;
+    }
+
+    .webdev {
+        margin-top: 05px;
+        font-size: 32px;
+    }
+
+    .webdevButtons {
+        font-weight: 800;
+        font-size: 15px;
+    }
+
+    .webdevButton {
+        margin-top: 20px !important;
+        background-color: #fff;
+        color: black;
+        border: 2px solid black;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .webdevButton.active {
+        background-color: magenta;
+    }
+
+}
+
+@media (min-width: 1100px) and (max-width: 1294px) {
+    
+    .webdevContainer {
+        display: flex;
+    }
+    
+    .webdevleftDiv {
+        width: 40%;
+        margin-top: 10px;
+        text-align: center;
+    }
+
+    .webdevrightDiv {
+        width: 60%;
+        margin-right: 80px;
+        margin-top: 20px !important;
+    }
+
+    .webdev {
+        margin-top: 05px;
+        font-size: 32px;
+    }
+
+    .webdevButtons {
+        margin-top: 10px;
+        font-weight: 800;
+        font-size: 20px;
+    }
+
+    .webdevButton {
+        margin-top: 30px !important;
+        background-color: #fff;
+        color: black;
+        border: 2px solid black;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin: 5px;
+    }
+
+    .webdevButton.active {
+        background-color: magenta;
+    }
+
+}
+
+@media (min-width: 1295px) and (max-width: 1400px) {
     
     .webdevContainer {
         display: flex;
@@ -49,4 +138,4 @@
         background-color: magenta;
     }
 
-} 
+}
