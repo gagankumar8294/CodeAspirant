@@ -437,6 +437,7 @@
 }
 
 @media (min-width: 310px) and (max-width: 320px) {
+
   .welcome {
     padding-left: 07px;
   }
@@ -522,7 +523,6 @@
   }
 }
 
-
 @media (min-width: 401px) and (max-width: 410px) {
   .welcome {
     padding-left: 63px;
@@ -531,7 +531,6 @@
     padding-left: 57px;
   }
 }
-
 
 /*   Galaxy Fold   */  /* height 653  */
 @media (min-width: 280px) and (max-width:300px) {

@@ -46,8 +46,8 @@ export default function Home() {
         <Subscribe />
       </div> */}
       <Services />
-      <Help />
-      <Project />
+      {/* <Help />
+      <Project /> */}
     </>
   )
 }
