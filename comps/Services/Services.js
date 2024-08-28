@@ -5,6 +5,7 @@ import Image from 'next/image';
 import SEO from './seo.png';
 import PortfolioWebsite from './portfolio-website-service-banglore.png'
 import BloggingWebsite from './HurdleFreeBloging.png'
+import webstyleserv from '../../comps/Services/Website.module.css'
 
 function Services() {
 
@@ -42,14 +43,16 @@ function Services() {
           </div>
         </div>
       </section>
-      <section className={servicestyles.webdevSection}>
-        <div className={servicestyles.webdevContainer}>
-          <div className={servicestyles.webdevleftDiv}>
-            <h1 className={servicestyles.webdev}>WEBSITE SERVICES</h1>
-            <ul className={servicestyles.webdevButtons}>
+
+      {/* web styles */}
+       <section className={webstyleserv.webdevSection}>
+        <div className={webstyleserv.webdevContainer}>
+          <div className={webstyleserv.webdevleftDiv}>
+            <h1 className={webstyleserv.webdev}>WEBSITE SERVICES</h1>
+            <ul className={webstyleserv.webdevButtons}>
             <li>
                 <button
-                  className={`${servicestyles.webdevButton} ${selectedService === 'portfolio' ? servicestyles.active : ''}`}
+                  className={`${webstyleserv.webdevButton} ${selectedService === 'portfolio' ? servicestyles.active : ''}`}
                   onClick={() => handleButtonClick('portfolio')}
                 >
                   Portfolio Website
@@ -57,7 +60,7 @@ function Services() {
               </li>
               <li>
                 <button
-                  className={`${servicestyles.webdevButton} ${selectedService === 'branding' ? servicestyles.active : ''}`}
+                  className={`${webstyleserv.webdevButton} ${selectedService === 'branding' ? servicestyles.active : ''}`}
                   onClick={() => handleButtonClick('branding')}
                 >
                   Branding Website
@@ -65,7 +68,7 @@ function Services() {
               </li>
               <li>
                 <button
-                  className={`${servicestyles.webdevButton} ${selectedService === 'blogging' ? servicestyles.active : ''}`}
+                  className={`${webstyleserv.webdevButton} ${selectedService === 'blogging' ? servicestyles.active : ''}`}
                   onClick={() => handleButtonClick('blogging')}
                 >
                   Blogging Website
@@ -73,7 +76,7 @@ function Services() {
               </li>
             </ul>
           </div>
-          <div className={servicestyles.webdevrightDiv}>
+          <div className={webstyleserv.webdevrightDiv}>
             {selectedService === 'portfolio' && (
                <a href="https://syedmujahid.vercel.app/" target="_blank" rel="noopener noreferrer">
               <Image 
