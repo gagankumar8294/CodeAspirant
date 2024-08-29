@@ -14,8 +14,9 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>CodeAspirant | Home</title>
-        <meta name='keywords' contents="codeaspirant" />
+        <title>CodeAspirant - Professional Web Developer in Bangalore | Web Design & Website Services</title>
+        <meta name='keywords' content='CodeAspirant,Gagan Web Developer, web developer in Bangalore, web designer, website creator, web design services, website development' />
+        <meta name='description' content='CodeAspirant, Gagan Web designer, offers professional web development and design services in Bangalore. Learn web development, explore tech tricks, and avail our website creation services.' />
       </Head>
       <div style={{paddingTop:"150px"}} className={styles.container}>  
 
