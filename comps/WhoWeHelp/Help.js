@@ -1,13 +1,32 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import help from './help.module.css'
 import weHelp from './weHelp.webp'
 import Image from "next/image";
 
 function Help() {
+
+  const [isMobileView , setIsMobileView] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 999);
+    };
+
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
     return (    
         <section className={help.helpSection}>
             <div className={help.services}>
             <div className={help.serviceOne}>
+              {!isMobileView ? (
+                null
+              ) : <h3 className={help.seo_mobile}>WHO WE HELP</h3>}
               <div className={help.service_leftDiv}>
               <Image
               className={help.leftDiv_img}

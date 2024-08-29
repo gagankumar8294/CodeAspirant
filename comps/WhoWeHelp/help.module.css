@@ -1,23 +1,11 @@
 .helpSection {
-    height: 85vh;
+    height: 550px;
     background-color: rgb(0, 0, 0);
-    margin-top: -50px;
 }
-
-.help_heading {
-    color: aliceblue;
-    font-size: 50px;
-    text-align: center;
-    font-family: "Dancing Script", cursive;
-    font-weight: 1000;
-}
-
 
 .serviceOne {
-    height: 100px;
     display: flex;
     margin-left: 100px;
-    margin-top: 40px;
 }
 
 .service_leftDiv {
@@ -25,7 +13,7 @@
 }
 
 .service_rightDiv {
-    text-align: center;
+    /* text-align: center; */
     width: 70%;
 }
 
@@ -33,11 +21,19 @@
     color: magenta;
 }
 
+.seo_mobile {
+    color: yellow;
+    text-align: center;
+    margin-top: 20px;
+    margin-left: -90px;
+}
+
 .seo {
     color: yellow;
     font-size: 40px;
     text-align: center;
     margin-top: 20px;
+    margin-left: -90px;
 }
 
 .ul {
@@ -94,7 +90,6 @@
 }
 
 .helpSection {
-    /* background-color: magenta; */
     background-color: rgba(230, 220, 245, 0.082);
     backdrop-filter: blur(3px);
     margin-left: 40px;
@@ -103,11 +98,186 @@
 }
 
 .leftDiv_img {
-    margin-top: 60px;
+    margin-top: 75px;
     border-radius: 15px;
 }
 
 .love {
     margin-top: 5px;
     fill: yellow;
+}
+
+/* Styles for screens less than 999px */
+@media (min-width: 900px) and (max-width: 999px) {
+    
+    .serviceOne {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center align all items */
+         /* Remove left margin for smaller screens */
+    }
+
+    .service_rightDiv {
+        width: 100%; /* Make the div full width */
+        text-align: center; /* Center align the text */
+        margin-bottom: 20px; /* Add space below the text */
+    }
+
+    .service_leftDiv {
+        width: 100%; /* Make the image div full width */
+        margin-bottom: 20px; /* Add space below the image */
+        text-align: center; /* Center align the image */
+    }
+
+    .leftDiv_img {
+        width: 100%; /* Make the image responsive */
+        height: auto; /* Maintain aspect ratio */
+    }
+
+    .helpSection {
+        width: 100%; /* Make the section full width */
+        padding: 20px; /* Add padding for spacing */
+    }
+
+    .ulDiv {
+        flex-direction: column; /* Stack lists vertically */
+        width: 100%; /* Make ulDiv full width */
+        margin-top: 20px; /* Add space between the image and text */
+    }
+
+    .ul {
+        margin: 0 auto 20px; /* Center align lists and add bottom margin */
+        padding: 0; /* Remove default padding */
+        text-align: left; /* Align text to left for better readability */
+    }
+
+    .leftul, .rightul {
+        margin: 0; /* Remove any default margin */
+    }
+
+    .li_icondiv {
+        justify-content: flex-start; /* Align icons and text to the left */
+        margin-bottom: 10px; /* Add spacing between list items */
+    }
+
+    .icon_color {
+        margin-right: 10px; /* Space between icon and text */
+    }
+
+    .love {
+        margin: 10px 0; /* Add space around love icon */
+    }
+  }
+
+@media (min-width: 1000px) and (max-width:1119px) {
+    .serviceOne {
+        margin-top: 50px !important;
+    }
+
+    .leftDiv_img {
+        margin-top: 135px !important;
+        margin-left: -70px;
+    }
+
+    .leftul {
+        margin-left: -50px;
+    }
+
+    .rightul {
+        margin-left: -10px;
+        margin-right: -45px;
+    }
+
+    .service_rightDiv {
+        margin-top: 10px !important;
+    }
+}
+
+@media (min-width: 1120px) and (max-width:1182px) {
+    .serviceOne {
+        margin-top: 50px !important;
+    }
+
+    .leftDiv_img {
+        margin-top: 135px !important;
+        margin-left: -70px;
+    }
+
+    .leftul {
+        margin-left: -50px;
+    }
+
+    .rightul {
+        margin-left: -10px;
+        margin-right: -35px;
+    }
+
+    .service_rightDiv {
+        margin-top: 20px !important;
+    }
+}
+
+@media (min-width: 1182px) and (max-width:1214px) {
+    .serviceOne {
+        margin-top: 50px !important;
+    }
+
+    .leftDiv_img {
+        margin-top: 125px !important;
+        margin-left: -50px;
+    }
+
+    .leftul {
+        margin-left: -20px;
+    }
+
+    .service_rightDiv {
+        margin-top: 20px !important;
+    }
+}
+
+@media (min-width: 1215px) and (max-width:1259px) {
+    .serviceOne {
+        margin-top: 50px !important;
+    }
+
+    .leftDiv_img {
+        margin-top: 110px !important;
+        margin-left: -50px;
+    }
+
+    .leftul {
+        margin-left: 0px;
+    }
+}
+
+@media (min-width: 1260px) and (max-width:1296px) {
+    .serviceOne {
+        margin-top: 50px !important;
+    }
+
+    .leftDiv_img {
+        margin-top: 105px !important;
+        margin-left: -30px;
+    }
+
+    .leftul {
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 1297px) and (max-width:1349px) {
+    .serviceOne {
+        margin-top: 50px !important;
+    }
+
+    .leftDiv_img {
+        margin-top: 95px !important;
+        margin-left: -20px;
+    }
+}
+
+@media (min-width: 1350px) and (max-width:1399px) {
+    .serviceOne {
+        margin-top: 50px !important;
+    }
 }
