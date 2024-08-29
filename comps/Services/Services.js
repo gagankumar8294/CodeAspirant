@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import servicestyles from './Services.module.css';
 import brandingwebsite from './branding-website.gif'
 import Image from 'next/image';
@@ -10,10 +10,27 @@ import webstyleserv from '../../comps/Services/Website.module.css'
 function Services() {
 
   const [selectedService, setSelectedService] = useState('branding');
+  const [isMobileView, setIsMobileView] = useState(false);
 
   const handleButtonClick = (service) => {
     setSelectedService(service);
   }
+
+  // Effect to check screen size and update the view
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobileView(window.innerWidth <= 999); // You can adjust this breakpoint as needed
+    };
+
+    // Check screen size on initial load and whenever resized
+    handleResize();
+    window.addEventListener('resize', handleResize);
+
+    // Cleanup the event listener on component unmount
+    return () => {
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
 
     return (
         <>
@@ -47,6 +64,9 @@ function Services() {
       {/* web styles */}
        <section className={webstyleserv.webdevSection}>
         <div className={webstyleserv.webdevContainer}>
+        {!isMobileView ? (
+           // Laptop view
+           <>
           <div className={webstyleserv.webdevleftDiv}>
             <h1 className={webstyleserv.webdev}>WEBSITE SERVICES</h1>
             <ul className={webstyleserv.webdevButtons}>
@@ -94,6 +114,25 @@ function Services() {
             />
             )}
           </div>
+          </>
+        ) : (
+          // Mobile and tablet view
+          <div className={webstyleserv.webdevMobileView}>
+            <h2 className={webstyleserv.webdev}>Website Services</h2>
+          <div className={webstyleserv.webdevServiceItem}>
+            <Image src={PortfolioWebsite} alt="Portfolio Website service in Bangalore" />
+            <p>Portfolio Website</p>
+          </div>
+          <div className={webstyleserv.webdevServiceItem}>
+            <Image src={brandingwebsite} alt="Branding Website service in Bangalore" />
+            <p>Branding Website</p>
+          </div>
+          <div className={webstyleserv.webdevServiceItem}>
+            <Image src={BloggingWebsite} alt="Blogging Website service in Bangalore" />
+            <p>Blogging Website</p>
+          </div>
+        </div>
+        )}
         </div>
       </section>
 
