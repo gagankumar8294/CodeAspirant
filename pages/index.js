@@ -8,7 +8,7 @@ import Services from '../comps/Services/Services.js';
 import Help from '@/comps/WhoWeHelp/Help';
 import Project from '@/comps/Projects/Projects';
 
-const textList = ['Learn Web Development', 'One Stop Web Solutions', 'We Provide Website Services',]
+const textList = ['Boost Your Web Savvy','Web Insights for Growth','Learn Web. Grow Business', 'One Stop Web Solutions', 'We Provide Website Services',]
 
 export default function Home() {
   return (
