@@ -7,6 +7,7 @@ import c from ".././public/homepage/c.gif";
 import Services from '../comps/Services/Services.js';
 import Help from '@/comps/WhoWeHelp/Help';
 import Project from '@/comps/Projects/Projects';
+import Subscribe from '@/comps/subscribe/Subscribe';
 
 const textList = ['Boost Your Web Savvy','Web Insights for Growth','Learn Web. Grow Business', 'One Stop Web Solutions', 'We Provide Website Services',]
 
@@ -43,12 +44,13 @@ export default function Home() {
           <Image src={c} width={300} height={400} alt="CodeAspirant" />
         </div>  
       </div>
-      {/* <div  className={styles.subscribe} style={{marginTop:"100px"}}>
-        <Subscribe />
-      </div> */}
+      
       <Services />
        <Help />
       <Project />
+      <div  className={styles.subscribe} style={{marginTop:"100px"}}>
+        <Subscribe />
+      </div>
     </>
   )
 }

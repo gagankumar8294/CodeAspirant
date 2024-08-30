@@ -123,11 +123,16 @@
     }
 
     .project_section {
-      height: 60vh;
+      height: 40vh;
     }
   }
 
   @media (min-width: 400px) and (max-width: 499px) {
+
+    .project_section {
+      height: 190px;
+    }
+
     .leftButton, .rightButton {
       display: none;
     }
@@ -155,14 +160,20 @@
     }
 
     .project_section {
-      height: 40vh;
+      height: 10vh;
+    }
+  }
+
+  @media (min-width: 361px) and (max-width: 400px) {
+    .project_section {
+      height: 150px;
     }
   }
 
   @media (min-width: 250px) and (max-width: 299px) {
 
     .project_section {
-      height: 40vh;
+      height: 05vh;
     }
 
     .leftButton, .rightButton {
