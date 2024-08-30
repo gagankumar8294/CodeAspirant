@@ -17,6 +17,22 @@
   color: magenta;
 }
 
+@media (min-width: 280px) and (max-width: 300px) {
+  .ul {
+    margin-left: 20px !important;
+    margin-right: 20px !important;
+    margin-top: 10px;
+  }
+
+  .ul li {
+    margin-bottom: 10px !important;
+  }
+
+  .seo {
+    font-size: 20px;
+  }
+}
+
 @media (min-width: 300px) and (max-width: 330px) {
 
   .service_heading {

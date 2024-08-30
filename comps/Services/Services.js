@@ -68,7 +68,7 @@ function Services() {
            // Laptop view
            <>
           <div className={webstyleserv.webdevleftDiv}>
-            <h1 className={webstyleserv.webdev}>WEBSITE SERVICES</h1>
+            <h2 className={webstyleserv.webdev}>WEBSITE SERVICES</h2>
             <ul className={webstyleserv.webdevButtons}>
   <li>
     <button
@@ -118,7 +118,7 @@ function Services() {
         ) : (
           // Mobile and tablet view
           <div className={webstyleserv.webdevMobileView}>
-            <h2 className={webstyleserv.webdev}>Website Services</h2>
+            <h2 className={webstyleserv.webdev}>WEBSITE SERVICES</h2>
           <div className={webstyleserv.webdevServiceItem}>
             <Image src={PortfolioWebsite} alt="Portfolio Website service in Bangalore" />
             <p>Portfolio Website</p>

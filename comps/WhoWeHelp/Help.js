@@ -5,7 +5,7 @@ import Image from "next/image";
 
 function Help() {
 
-  const [isMobileView , setIsMobileView] = useState(false);
+  const [isMobileView , setIsMobileView] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {

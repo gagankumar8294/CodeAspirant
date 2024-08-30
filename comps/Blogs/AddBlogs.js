@@ -234,7 +234,7 @@ function AddBlogs() {
                                 {firstImage && (
                                     <img
                                         src={firstImage.value}
-                                        alt="Blog Image"
+                                        alt={firstImage.alt || "Blog Image"}  // Update here to use alt text from the database
                                         style={{ width: "200px", height: "150px" }}
                                     />
                                 )}
