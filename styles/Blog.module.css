@@ -9,6 +9,11 @@
   padding-top: 150px;
 }
 
+.containerMargin {
+  padding: 60vh;
+  text-align: center;
+}
+
 /* YT setup */ /* h3 h2 h1 */
 @media (max-width: 290px) {
   .yt_vid_border {
