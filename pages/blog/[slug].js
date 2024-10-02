@@ -1,100 +1,109 @@
-// import { useRouter } from "next/router";
-// import { useState, useEffect } from "react";
-import styles from '../../styles/Blog.module.css'
-// import SingleBlogPost from "@/comps/SingleBlogPost";
-// export async function getStaticPaths() {
-//   try {
-//     const res = await fetch("http://localhost:3000/api/getBlogs");
-//     const data = await res.json();
-
-//     const paths = data.blogs.map((blog) => ({
-//       params: { slug: blog.slug },
-//     }));
-
-//     return { paths, fallback: false }; // No need for fallback since we're pre-generating all paths
-//   } catch (error) {
-//     console.error("Error fetching blogs:", error);
-//     return { paths: [], fallback: false };
-//   }
-// }
-
-// export async function getStaticProps({ params }) {
-//   try {
-//     console.log("Fetching blog for slug:", params.slug); // Add this log for debugging
-//     const res = await fetch(`http://localhost:3000/api/getBlog/${params.slug}`);
-    
-//     if (!res.ok) {
-//       throw new Error(`Failed to fetch blog post: ${res.status}`);
-//     }
-
-//     const data = await res.json();
-
-//     if (!data.blogPost) {
-//       return { notFound: true };
-//     }
-
-//     return { props: { blogPost: data.blogPost } };
-//   } catch (error) {
-//     console.error("Error fetching blog post:", error);
-//     return { notFound: true };
-//   }
-// }
-
-// const SingleBlogPage = ({ blogPost }) => {
-//   const router = useRouter();
-
-//   // Handle case where blogPost is null (e.g., if fetching fails)
-//   if (!blogPost) {
-//     return (
-//       <div>
-//         <p>Blog post not found.</p>
-//         <button onClick={() => router.push("/blog")}>Back to Blog List</button>
-//       </div>
-//     );
-//   }
-
-//   return (
-//     <div>
-//       <h1>{blogPost.title}</h1>
-//       <p>{blogPost.createdAt}</p>
-//       <div dangerouslySetInnerHTML={{ __html: blogPost.content }} />
-//     </div>
-//   );
-// };
-
-// export default SingleBlogPage;
-
 // pages/blog/[slug].js
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
-import { useEffect, useState } from 'react';
+import { db } from '../../firebaseConfig';
+import { collection, query, where, getDocs } from 'firebase/firestore';
+// import styles from '../../comps/Blogs/Blogs.module.css'
+import styles from '../../styles/Blog.module.css';
 
-export default function BlogPost() {
-  const router = useRouter();
-  const { slug } = router.query;
-  const [blog, setBlog] = useState(null);
+const BlogDetail = () => {
+    const router = useRouter();
+    const { slug } = router.query;
+    const [blog, setBlog] = useState(null);
 
-  useEffect(() => {
-    if (slug) {
-      async function fetchBlog() {
-        const response = await fetch(`/api/getblogposts`);
-        const data = await response.json();
-        const selectedBlog = data.find((post) => post.slug === slug);
-        setBlog(selectedBlog);
-      }
+    useEffect(() => {
+        if (slug) {
+            const fetchBlogBySlug = async () => {
+                // Query the collection "blogs" where the field "slug" matches the slug from the URL
+                const q = query(collection(db, "blogs"), where("slug", "==", slug));
+                const querySnapshot = await getDocs(q);
+                if (!querySnapshot.empty) {
+                    const blogData = querySnapshot.docs[0].data();
+                    setBlog(blogData);
+                }
+            };
+            fetchBlogBySlug();
+        }
+    }, [slug]);
 
-      fetchBlog();
+    if (!blog) {
+        return <p>Loading...</p>;
     }
-  }, [slug]);
 
-  if (!blog) {
-    return <p>Loading...</p>;
-  }
+    return (
+        <div style={{paddingTop:"150px"}}>
+          <div>
+            <h1 className={styles.h1_heading}>
+                {/* {blog.sections.find(section => section.type === "title").value} */}
+            </h1>
+            {blog.sections.map((section, index) => {
+                switch (section.type) {
+                    case 'title':
+                      return (
+                        <h1 className={styles.main_heading} key={index} >
+                          {section.value}
+                        </h1>
+                      );
+                    case 'h1':
+                      return (
+                        <h1 key={index} className={styles.h1}>
+                          {section.value}
+                        </h1>
+                      );
+                    case 'h2':
+                      return (
+                        <h2 key={index} className={styles.h2}>
+                          {section.value}
+                        </h2>
+                      );
+                    case 'h3':
+                      return (
+                        <h3 key={index} className={styles.h3}>
+                          {section.value}
+                        </h3>
+                      );
+                    case 'content':
+                    case 'paragraph':
+                      return (
+                        <p key={index} className={styles.paragraph}>
+                          {section.value}
+                        </p>
+                      );
+                      case 'link':
+                        const linkUrl = section.value.startsWith('http://') || section.value.startsWith('https://')
+                        ? section.value
+                        : `https://${section.value}`;  
+                        // Prepend https:// if not already present
+                        return (
+                          <a
+                            key={index}
+                            href={linkUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className={styles.link}
+                          >
+                            {section.linkText} {/* Use section.linkText here instead of section.alt */}
+                          </a>
+                        );
+                    case 'image':
+                      return (
+                        <div key={index} className={styles.imageContainer}>
+                          <img
+                            src={section.value}
+                            alt={section.alt || 'Blog Image'}
+                            className={styles.image_wh}
+                          />
+                        </div>
+                      );
+                    default:
+                      return null;
+                  }
+            })}
+          </div>
+            
+            
+        </div>
+    );
+};
 
-  return (
-    <div  className={styles.container}>
-      <h1>{blog.title}</h1>
-      <p>{blog.content}</p>
-      <p><strong>Created at:</strong> {new Date(blog.createdAt).toLocaleString()}</p>
-    </div>
-  );
-}
+export default BlogDetail;

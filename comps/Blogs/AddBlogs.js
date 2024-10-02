@@ -6,7 +6,7 @@ import { ref, uploadBytesResumable, getDownloadURL } from "firebase/storage";
 import { useRouter } from 'next/router';
 
 function AddBlogs() {
-    const [sections, setSections] = useState([{ type: "title", value: "", alt: ""  }]);
+    const [sections, setSections] = useState([{ type: "title", value: "", alt: "" }]);
     const [blogs, setBlogs] = useState([]);
     const titleRef = useRef(null);
     const router = useRouter();
@@ -21,9 +21,9 @@ function AddBlogs() {
                 const data = doc.data();
                 return {
                     id: doc.id,
-                    sections: data.sections,
+                    sections: data.sections || [],  // Ensure sections is always an array
                     createdOn: data.createdOn ? data.createdOn.toDate() : null,
-                    slug: data.slug || data.sections.find(section => section.type === "title").value.toLowerCase().replace(/ /g, '-')
+                    slug: data.slug || (data.sections && data.sections.find(section => section.type === "title"))?.value.toLowerCase().replace(/ /g, '-') || ''
                 };
             });
             setBlogs(blogs);
@@ -34,7 +34,7 @@ function AddBlogs() {
 
     const addSection = (type) => {
         if (!type) return;
-        setSections([...sections, { type, value: "", alt: ""  }]);
+        setSections([...sections, { type, value: "", alt: "" }]);
     };
 
     const handleSectionChange = (index, value) => {
@@ -57,7 +57,7 @@ function AddBlogs() {
             setSections(updatedSections);
         }
     };
-
+    
     const handleLinkChange = (index, value, isText) => {
         const updatedSections = [...sections];
         if (isText) {
@@ -128,82 +128,57 @@ function AddBlogs() {
                     <form onSubmit={handleSubmit}>
                         {sections.map((section, index) => (
                             <div key={index}>
-                                {/* Blog title */}
                                 {section.type === "title" && (
                                     <Row label="Title">
                                         <input
                                             className={styles.input}
                                             placeholder="Enter the Title Here..."
                                             value={section.value}
-                                            onChange={(e) =>
-                                                handleSectionChange(index, e.target.value)
-                                            }
+                                            onChange={(e) => handleSectionChange(index, e.target.value)}
                                             ref={index === 0 ? titleRef : null}
                                         />
                                     </Row>
                                 )}
-                                {/* content means paragraphs */}
-                                {section.type === "content" && (
-                                    <Row label="Content">
-                                        <textarea
-                                            className={styles.content}
-                                            placeholder="Enter the Content Here..."
-                                            value={section.value}
-                                            onChange={(e) =>
-                                                handleSectionChange(index, e.target.value)
-                                            }
-                                        />
-                                    </Row>
-                                )}
-
-{["h1", "h2", "h3", "paragraph"].includes(section.type) && (
+                                {["h1", "h2", "h3", "paragraph"].includes(section.type) && (
                                     <Row label={`Enter ${section.type.toUpperCase()} Text`}>
                                         <textarea
                                             className={styles.content}
                                             placeholder={`Enter the ${section.type.toUpperCase()} Text Here...`}
                                             value={section.value}
-                                            onChange={(e) =>
-                                                handleSectionChange(index, e.target.value)
-                                            }
+                                            onChange={(e) => handleSectionChange(index, e.target.value)}
                                         />
                                     </Row>
                                 )}
-
                                 {section.type === "link" && (
                                     <Row label="Link">
                                         <input
                                             className={styles.input}
                                             placeholder="Enter Link Text Here..."
                                             value={section.linkText || ""}
-                                            onChange={(e) =>
-                                                handleLinkChange(index, e.target.value, true)
-                                            }
+                                            onChange={(e) => handleLinkChange(index, e.target.value, true)}
                                         />
                                         <input
                                             className={styles.input}
                                             placeholder="Enter URL Here..."
                                             value={section.value}
-                                            onChange={(e) =>
-                                                handleLinkChange(index, e.target.value, false)
-                                            }
+                                            onChange={(e) => handleLinkChange(index, e.target.value, false)}
                                         />
                                     </Row>
                                 )}
-
                                 {section.type === "image" && (
-                                <>
-                                    <Row label="Image">
-                                        <input type="file" onChange={(e) => handleImageChange(index, e)} />
-                                    </Row>
-                                    <Row label="Alt Text">
-                                        <textarea
-                                            className={styles.input}
-                                            placeholder="Enter a descriptive alt text for the image, including relevant keywords..."
-                                            value={section.alt}
-                                            onChange={(e) => handleAltTextChange(index, e.target.value)}
-                                        />
-                                    </Row>
-                                </>
+                                    <>
+                                        <Row label="Image">
+                                            <input type="file" onChange={(e) => handleImageChange(index, e)} />
+                                        </Row>
+                                        <Row label="Alt Text">
+                                            <textarea
+                                                className={styles.input}
+                                                placeholder="Enter a descriptive alt text for the image..."
+                                                value={section.alt}
+                                                onChange={(e) => handleAltTextChange(index, e.target.value)}
+                                            />
+                                        </Row>
+                                    </>
                                 )}
                             </div>
                         ))}
@@ -219,7 +194,6 @@ function AddBlogs() {
                             <option value="image">Image</option>
                         </select>
 
-                        <button type="button" onClick={() => addSection()}>Add Section</button>
                         <button className={styles.btn} type="submit">Submit Blog</button>
                     </form>
                 </div>
@@ -234,15 +208,15 @@ function AddBlogs() {
                                 {firstImage && (
                                     <img
                                         src={firstImage.value}
-                                        alt={firstImage.alt || "Blog Image"}  // Update here to use alt text from the database
+                                        alt="Blog Image"
                                         style={{ width: "200px", height: "150px" }}
                                     />
                                 )}
                                 {firstTitle && <h3>{firstTitle.value}</h3>}
                                 {blog.createdOn && <p>Created On: {blog.createdOn.toLocaleString()}</p>}
-                        <button onClick={() => removeBlog(blog.id)} className={styles.readMore}>
-                            Delete
-                        </button>
+                                <button onClick={() => removeBlog(blog.id)} className={styles.readMore}>
+                                    Delete
+                                </button>
                             </div>
                         );
                     })}

@@ -1,20 +1,21 @@
-
-const { initializeApp } = require('firebase/app');
-const { getFirestore } = require('firebase/firestore');
-const { getStorage } = require('firebase/storage');
+import { initializeApp } from "firebase/app";
+import { getFirestore } from "firebase/firestore";
+import { getStorage } from "firebase/storage";
 
 const firebaseConfig = {
-    apiKey: "AIzaSyAHN589skuWjh4PESCsHnad_UjQvco2BdM",
-    authDomain: "blogging-app-6cc1e.firebaseapp.com",
-    projectId: "blogging-app-6cc1e",
-    storageBucket: "blogging-app-6cc1e.appspot.com",
-    messagingSenderId: "290659739377",
-    appId: "1:290659739377:web:446982e327b1a7fcc12b50"
+  apiKey: "AIzaSyDBNy_zUqIYZ_to_Kf239JeVyXXW1BIsSs",
+  authDomain: "blogappversiontwo.firebaseapp.com",
+  projectId: "blogappversiontwo",
+  storageBucket: "blogappversiontwo.appspot.com",
+  messagingSenderId: "615467065217",
+  appId: "1:615467065217:web:cde9d2f44bb3c4ebd5d280",
+  measurementId: "G-357TWWPT78"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
 const db = getFirestore(app);
 const storage = getStorage(app);
-module.exports = { db , storage };
+
+
+export { db, storage };

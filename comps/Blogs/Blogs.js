@@ -47,6 +47,19 @@ function Blogs() {
 
                         return (
                             <div className={style.blogCard} key={blog.id}>
+                                {/* {firstImage && firstImage.value && (
+                                    <img
+                                        src={firstImage.value}
+                                        alt="Blog Image - codeaspirant"
+                                    />
+                                )}
+                                {firstTitle && <h3>{firstTitle.value}</h3>}
+                                <button
+                                    onClick={() => handleReadMore(blog)}
+                                    className={style.readMore}
+                                >
+                                    Read More
+                                </button> */}
                                 {firstImage && (
                                     <img
                                         src={firstImage.value}
