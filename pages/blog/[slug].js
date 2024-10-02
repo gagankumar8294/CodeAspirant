@@ -5,6 +5,7 @@ import { db } from '../../firebaseConfig';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 // import styles from '../../comps/Blogs/Blogs.module.css'
 import styles from '../../styles/Blog.module.css';
+import Subscribe from '../api/subscribe';
 
 const BlogDetail = () => {
     const router = useRouter();
@@ -146,6 +147,31 @@ const BlogDetail = () => {
                 </ul>
               </div>
             </section>
+
+            {/* community joine */}
+            <div className={styles.community_div}>
+              <section className={styles.community}>
+              <h4>3 Ways to Join Our Community</h4>
+              <div className={styles.download_our_app}>
+                <h3>Telegram Group</h3>
+                <p>Discover special offers, top stories, upcoming events, and more.</p>
+                <h5><a href='https://t.me/+AMw2eT97A885Yjhl'>Join Telegram</a></h5>
+              </div>
+
+              <div className={styles.download_our_app}>
+                <h3>WhatsApp Group</h3>
+                <p>Discover special offers, top stories, upcoming events, and more.</p>
+                <h5><a href='https://chat.whatsapp.com/BOypJbJNmaJHgWtWfdrx3i'>Join Whatsapp</a></h5>
+              </div>
+
+              <div className={styles.download_our_app}>
+                <h3>Subscribe to our Daily newsletter</h3>
+                <p>Join our editors every weekday evening as they steer you through the most significant news of the day.</p>
+              </div>
+            </section>
+            </div>
+            
+            {/* <Subscribe /> */}
         </div>
     );
 };

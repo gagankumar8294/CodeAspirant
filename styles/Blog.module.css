@@ -2565,4 +2565,192 @@
     margin-bottom: 30px;
    }
 
-} 
+}
+
+@media (min-width: 801px) and (max-width: 1050px) {
+  
+  .svg {
+    width: 35px;
+    height: 35px;
+    fill: #FF10FF;
+  }
+  
+  .so_sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .social li {
+    margin-left:7px;
+    margin-right: 7px;
+  }
+  
+  .social ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .download_our_app {
+    border: solid 1.5px rgb(229, 229, 229);
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+  }
+
+  .download_our_app:hover {
+    border: solid 1.5px rgb(31, 146, 31);
+  }
+
+  .community {
+    border-top: 1px solid #fff;
+    width: 650px;
+    margin: 0 auto; /* This will center the div horizontally */
+  }
+
+   .community h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 50px;
+    font-weight: 600;
+    height: 150px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+   .community h3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 27.6px;
+    text-align: center;
+   }
+
+   .community p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 71.3906px;
+    line-height: 1.7em;
+    margin-top: 20px;
+   }
+
+   .community h5 {
+    margin-top: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    line-height: 1em;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .community h5:hover {
+    background-color: yellow;
+   }
+}
+
+@media (min-width: 1051px) and (max-width: 1550px) {
+  
+  .svg {
+    width: 40px;
+    height: 40px;
+    fill: #FF10FF;
+  }
+  
+  .so_sec {
+    margin-top: 30px;
+    margin-bottom: 30px;
+  }
+
+  .social li {
+    margin-left:7px;
+    margin-right: 7px;
+  }
+  
+  .social ul {
+    display: flex;
+    justify-content: center;
+  }
+
+  .download_our_app {
+    border: solid 1.5px rgb(229, 229, 229);
+    width: 80%;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    text-align: center;
+    transition: border 0.3s ease-in-out;
+  }
+
+  .download_our_app:hover {
+    border: solid 1.5px rgb(31, 146, 31);
+  }
+
+  .community {
+    border-top: 1px solid #fff;
+    width: 750px;
+    margin: 0 auto; /* This will center the div horizontally */
+  }
+
+   .community h4 {
+    font-family: "EB Garamond", sans-serif;
+    font-size: 50px;
+    font-weight: 750px;
+    height: 150px;
+    line-height: 50px;
+    text-align: center;
+    margin-top: 50px;
+   }
+
+   .community h3 {
+    font-size: 30px;
+    font-weight: 600;
+    font-family: "EB Garamond", sans-serif;
+    line-height: 27.6px;
+    text-align: center;
+   }
+
+   .community p {
+    font-family: "DM Sans", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    height: 71.3906px;
+    line-height: 1.7em;
+    margin-top: 20px;
+   }
+
+   .community h5 {
+    margin-top: 35px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+    color: black;
+    font-family: "DM Sans", Sans-serif;
+    font-size: 15px;
+    font-weight: 600;
+    background-color: #fff;
+    margin-left: 20px;
+    margin-right: 20px;
+    text-transform: uppercase;
+    line-height: 1em;
+    transition: background-color 0.3s ease-in-out;
+   }
+
+   .community h5:hover {
+    background-color: yellow;
+   }
+}
