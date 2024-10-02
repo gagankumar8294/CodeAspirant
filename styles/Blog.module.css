@@ -625,7 +625,6 @@
     height: 330px;
   }
 }
-
 @media(min-width: 626px) and (max-width: 665px) {
 
   .main_heading {
@@ -657,7 +656,6 @@
 
   
 }
-
 @media(max-width: 665px) {
 
   .h1 {
@@ -705,7 +703,6 @@
   }
 }
 /*----yt_setup---- ADJUSTING*/
-
 @media(min-width: 666px) and (max-width: 690px) {
   .main_heading {
     font-size: 43px !important;
