@@ -5,7 +5,7 @@ import { db } from '../../firebaseConfig';
 import { collection, query, where, getDocs } from 'firebase/firestore';
 // import styles from '../../comps/Blogs/Blogs.module.css'
 import styles from '../../styles/Blog.module.css';
-import Subscribe from '../api/subscribe';
+// import Subscribe from '../api/subscribe';
 
 const BlogDetail = () => {
     const router = useRouter();

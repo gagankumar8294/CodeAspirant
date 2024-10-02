@@ -120,7 +120,7 @@ function Subscribe() {
       marginBottom: '20px',
       marginTop: '10px',
        }}>
-      {message ? message : `Register for Offers Updates`}
+      {message ? message : `Register for additional Perks`}
     </div>
     <button
       type="submit"
