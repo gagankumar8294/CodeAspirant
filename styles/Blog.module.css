@@ -13,6 +13,18 @@
   text-align: center;
 }
 
+.main_heading {
+  color: #FF10FF;
+}
+
+.h2 {
+  color: #FF10FF !important;
+}
+
+.h1 {
+  color: #FF10FF !important;
+}
+
 /* YT setup */ /* h3 h2 h1 */
 @media (max-width: 290px) {
   .yt_vid_border {
