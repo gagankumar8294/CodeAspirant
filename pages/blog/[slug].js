@@ -82,8 +82,8 @@ const BlogDetail = () => {
             </h1>
 
                 {/* Display blog post relative time */}
-                <p className={styles.date}>
-                    Posted {timeAgo}
+                <p className={styles.paragraph}>
+                    <span className={styles.time}>Posted {timeAgo}</span>
                 </p>           
                 {blog.sections.map((section, index) => {
                 switch (section.type) {
