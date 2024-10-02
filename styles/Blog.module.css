@@ -17,6 +17,14 @@
   color: #FF10FF;
 }
 
+.svgs {
+  fill: #FF10FF;
+}
+
+.flexings {
+  display: flex;
+}
+
 .h2 {
   color: #FF10FF !important;
 }

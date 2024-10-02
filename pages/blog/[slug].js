@@ -76,15 +76,29 @@ const BlogDetail = () => {
 
     return (
         <div style={{paddingTop:"150px"}}>
-          <div>
+          <div >
             <h1 className={styles.h1_heading}>
                 {/* {blog.sections.find(section => section.type === "title").value} */}
             </h1>
 
                 {/* Display blog post relative time */}
+                <div className={styles.flexings}>
                 <p className={styles.paragraph}>
+                {/* <svg className={styles.svgs} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="32" height="32">
+              <rect x="3" y="4" width="18" height="18" rx="2" ry="2" stroke="black" fill="#FFD700"/>
+              <line x1="3" y1="8" x2="21" y2="8" stroke="black"/>
+              <line x1="7" y1="1" x2="7" y2="4" stroke="black"/>
+              <line x1="17" y1="1" x2="17" y2="4" stroke="black"/>
+              <circle cx="7" cy="12" r="1.5" fill="black"/>
+              <circle cx="12" cy="12" r="1.5" fill="black"/>
+              <circle cx="17" cy="12" r="1.5" fill="black"/>
+              <circle cx="7" cy="16" r="1.5" fill="black"/>
+              <circle cx="12" cy="16" r="1.5" fill="black"/>
+              <circle cx="17" cy="16" r="1.5" fill="black"/>
+            </svg> */}
                     <span className={styles.time}>Posted {timeAgo}</span>
-                </p>           
+                </p>
+                </div>          
                 {blog.sections.map((section, index) => {
                 switch (section.type) {
                     case 'title':
