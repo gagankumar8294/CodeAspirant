@@ -11,6 +11,7 @@ const BlogDetail = () => {
     const router = useRouter();
     const { slug } = router.query;
     const [blog, setBlog] = useState(null);
+    const [postDate, setPostDate] = useState(null);
 
     useEffect(() => {
         if (slug) {
@@ -21,6 +22,15 @@ const BlogDetail = () => {
                 if (!querySnapshot.empty) {
                     const blogData = querySnapshot.docs[0].data();
                     setBlog(blogData);
+
+                    // Get the createdOn timestamp and format the date
+                    const createdOnTimestamp = blogData.createdOn;
+                    const formattedDate = new Date(createdOnTimestamp.seconds * 1000).toLocaleDateString('en-IN', {
+                        day: 'numeric',
+                        month: 'long',
+                        year: 'numeric',
+                    });
+                    setPostDate(formattedDate);
                 }
             };
             fetchBlogBySlug();
@@ -31,6 +41,36 @@ const BlogDetail = () => {
         return <p>Loading...</p>;
     }
 
+    // Function to calculate the time difference and return the appropriate format
+    const getTimeAgo = (createdOn) => {
+      const now = new Date();
+      const diffInMs = now - createdOn;
+      const diffInMinutes = Math.floor(diffInMs / (1000 * 60));
+      const diffInHours = Math.floor(diffInMinutes / 60);
+      const diffInDays = Math.floor(diffInHours / 24);
+
+      if (diffInMinutes < 60) {
+          return `${diffInMinutes} minute${diffInMinutes === 1 ? '' : 's'} ago`;
+      } else if (diffInHours < 24) {
+          return `${diffInHours} hour${diffInHours === 1 ? '' : 's'} ago`;
+      } else if (diffInDays < 7) {
+          return `${diffInDays} day${diffInDays === 1 ? '' : 's'} ago`;
+      } else {
+          return createdOn.toLocaleDateString("en-IN", {
+              year: 'numeric',
+              month: 'long',
+              day: 'numeric'
+          }) + ' at ' + createdOn.toLocaleTimeString("en-IN", {
+              hour: '2-digit',
+              minute: '2-digit',
+              hour12: false
+          });
+      }
+  };
+
+  const createdOn = blog.createdOn.toDate();
+  const timeAgo = getTimeAgo(createdOn);
+
     const blogURL = `${window.location.origin}/blog/${slug}`;
     const blogTitle = blog.sections.find(section => section.type === "title")?.value || "Untitled Blog";
 
@@ -40,7 +80,12 @@ const BlogDetail = () => {
             <h1 className={styles.h1_heading}>
                 {/* {blog.sections.find(section => section.type === "title").value} */}
             </h1>
-            {blog.sections.map((section, index) => {
+
+                {/* Display blog post relative time */}
+                <p className={styles.date}>
+                    Posted {timeAgo}
+                </p>           
+                {blog.sections.map((section, index) => {
                 switch (section.type) {
                     case 'title':
                       return (

@@ -25,6 +25,11 @@
   color: #FF10FF !important;
 }
 
+.date {
+  color: yellow;
+  padding-left: 30px;
+}
+
 /* YT setup */ /* h3 h2 h1 */
 @media (max-width: 290px) {
   .yt_vid_border {
