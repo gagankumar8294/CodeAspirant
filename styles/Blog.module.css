@@ -4,8 +4,15 @@
 /* size decreased*/
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;1,400;1,500&display=swap');
 
+.blogLoading {
+  margin-top: auto 0px;
+  text-align: center;
+  color: #FF10FF;
+}
+
 .container {
   padding-top: 150px;
+  text-align: center;
 }
 
 .containerMargin {

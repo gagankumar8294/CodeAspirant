@@ -7,6 +7,7 @@ import { useRouter } from 'next/router';
 
 function Blogs() {
     const [blogs, setBlogs] = useState([]);
+    const [loading, setLoading] = useState(true); // Add a loading state
     const titleRef = useRef(null);
     const router = useRouter();
 
@@ -26,6 +27,7 @@ function Blogs() {
                 };
             });
             setBlogs(blogs);
+            setLoading(false); // Set loading to false once blogs are fetched
         });
 
         return () => unsub();
@@ -39,6 +41,11 @@ function Blogs() {
         <>
             <section className={styles.blogs_Section}>
                 <h2 className={styles.heading}>Blogs</h2>
+
+                {/* Show loading message while blogs are being fetched */}
+                {loading ? (
+                    <div className={styles.blogLoading}>Loading... Please wait</div>
+                ) : (
                 
                 <div className={style.blogList}>
                     {blogs.map((blog) => {
@@ -77,6 +84,7 @@ function Blogs() {
                         );
                     })}
                 </div>
+                )}
             </section>
         </>
     );

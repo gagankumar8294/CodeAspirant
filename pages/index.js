@@ -8,10 +8,25 @@ import Services from '../comps/Services/Services.js';
 import Help from '@/comps/WhoWeHelp/Help';
 import Project from '@/comps/Projects/Projects';
 import Subscribe from '@/comps/subscribe/Subscribe';
+// import SplashScreen from '@/comps/SplashScreen';
+// import { useState, useEffect } from 'react';
 
 const textList = ['Boost Your Web Savvy','Web Insights for Growth','Learn Web. Grow Business', 'One Stop Web Solutions', 'We Provide Website Services',]
 
 export default function Home() {
+
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(() => {
+  //   // Set a timer to hide splash screen after 5 seconds
+  //   const timer = setTimeout(() => {
+  //     setLoading(false);
+  //   }, 5000); // 5 seconds
+
+  //   // Cleanup the timer
+  //   return () => clearTimeout(timer);
+  // }, []);
+
   return (
     <>
       <Head>
@@ -19,7 +34,12 @@ export default function Home() {
         <meta name='keywords' content='CodeAspirant,Gagan Web Developer, web developer in Bangalore, web designer, website creator, web design services, website development' />
         <meta name='description' content='CodeAspirant, Gagan Web designer, offers professional web development and design services in Bangalore. Learn web development, explore tech tricks, and avail our website creation services.' />
       </Head>
+      {/* {loading ? (
+        <SplashScreen />
+      ) : ( */}
       <div style={{paddingTop:"150px"}} className={styles.container}>  
+
+    
 
       <div className={styles.leftDiv}>
           <h4 className={styles.dynamic_text} >Welcome to<span className={styles.main_title}>Code Aspirant</span></h4>
@@ -44,7 +64,7 @@ export default function Home() {
           <Image src={c} width={300} height={400} alt="CodeAspirant" />
         </div>  
       </div>
-      
+      {/* )} */}
       <Services />
        <Help />
       <Project />
