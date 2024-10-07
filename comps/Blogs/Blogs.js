@@ -44,7 +44,9 @@ function Blogs() {
 
                 {/* Show loading message while blogs are being fetched */}
                 {loading ? (
-                    <div className={styles.blogLoading}>Loading... Please wait</div>
+                    <div>
+                        <p className={styles.loading_text}>Loading... Please wait</p>
+                    </div>
                 ) : (
                 
                 <div className={style.blogList}>

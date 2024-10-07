@@ -1,3 +1,8 @@
+.loading_text {
+  text-align: center;
+  margin: auto 0px;
+}
+
 .blogs_Section {
     padding-top: 110px;
 }
