@@ -15,10 +15,16 @@ const Footer = () => {
                     <Link href="/privacy" style={styles.link}>
                         Privacy Policy
                     </Link>
-                    <a href="tel:+1234567890" style={styles.link}>Contact: +919148644611</a>
+                    <Link href="/refundcancellation" style={styles.link}>
+                        Refund Cancellation
+                    </Link>
+                    <Link href="/contact" style={styles.link}>
+                        Contact Us
+                    </Link>
+                    <a href="tel:+919844299703" style={styles.link}>Whatsapp: +919148644611</a>
                 </div>
                 <div style={styles.copyright}>
-                    &copy; 2024 CodeAspirant. All rights reserved.
+                    &copy; 2025 CodeAspirant. All rights reserved.
                 </div>
             </div>
         </footer>
